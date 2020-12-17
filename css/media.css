@@ -36,8 +36,6 @@
     }
 }
 
-@media only screen and (max-width: 1440px) {}
-
 @media only screen and (max-width: 1350px) {
 
     /*********  두번째 페이지 - about_page_wrap  **********/
@@ -62,12 +60,13 @@
 @media only screen and (max-width: 1024px) {
 
     /************** 첫 페이지 - nav_page **************/
-    body .nav_page {
-        height: 80vmin;
+
+    .nav_page_area .first_bg li {
+        font-size: 31vw;
     }
 
     .nav_page nav .gnb_btn {
-        width: 12%;
+        width: 14%;
         top: 12%;
         right: 3%;
     }
@@ -86,7 +85,11 @@
     }
 
     .about_box .about_img_area {
-        width: 38%;
+        width: 46%;
+    }
+
+    .about_box .about_box_bg li {
+        font-size: 7.8vw;
     }
 
     .about_info .about_title p {
@@ -195,11 +198,6 @@
         font-size: 12px;
     }
 
-    /*********  두번째 페이지 - about_page_wrap  **********/
-    #about_page_wrap .about_box {
-        height: 80vmin;
-    }
-
     /********* 네번째 페이지 - project_page_wrap *********/
     .project_page_header #circle_svg text {
         letter-spacing: 0.7rem;
@@ -247,15 +245,15 @@
     }
 
     .project_page_header #circle_svg {
-        margin-top: 20%;
+        margin-left: -5%;
     }
 
     .project_page_header .project_title {
-        top: 10%;
+        top: 15%;
     }
 
     .project_page_header .project_page_text {
-        padding: 20% 5% 5%;
+        padding: 35% 5% 5%;
     }
 
     .project_page_header .project_page_text br {
@@ -298,24 +296,59 @@
     }
 
     /************** 첫 페이지 - nav_page **************/
-    .nav_page_area .first_bg li {
-        font-size: 31vw;
+    body .nav_page {
+        height: 100vh;
     }
 
     .nav_page_area .first_bg li span {
         top: -10px;
     }
 
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    #about_page_wrap .about_box {
+        height: 100vh;
+    }
+
+    .about_box .about_box_area {
+        top: 10%;
+        transform: none;
+    }
+
+    .about_info_intro .about_info_text {
+        position: absolute;
+        top: -50%;
+    }
+
+    .about_info .about_info_text {
+        padding: 5% 10% 0;
+    }
+
+
     .about_info .about_info_text h3 {
+        padding-bottom: 10%;
         font-size: 1.75rem;
+        text-align: center;
     }
 
     .about_info_text .break {
         display: block;
     }
 
+    #about_page_wrap .about_info {
+        height: 100vh;
+    }
+
+    .about_info .about_info_list_box {
+        padding-top: 10%;
+    }
+
     .about_info_list .about_info_list_box dd {
         padding-left: 25%;
+    }
+
+    .about_info_list .about_info_list_box dt {
+        float: initial;
+        padding-bottom: 10px;
     }
 
     .about_info_list .about_education p {
@@ -324,6 +357,10 @@
 
 
     /********* 네번째 페이지 - project_page_wrap *********/
+    #project_page_wrap .project_page_header {
+        height: 100vh;
+    }
+
     .project_page_header .project_title li {
         font-size: 7rem;
     }
@@ -331,10 +368,7 @@
     .project_page_header #circle_svg {
         width: 190px;
         height: 190px;
-    }
-
-    .project_page_header .project_page_text {
-        padding: 15% 5% 5%;
+        margin-left: -5%;
     }
 
     .project_area .project_viewF span {
@@ -344,10 +378,47 @@
 
     .project_area .project_viewF h3 {
         bottom: -18px;
+        right: -20px;
         font-size: 2.5rem;
     }
 
+    .project_page_header .project_page_text {
+        padding: 55% 5% 5%;
+        font-size: 1.3rem;
+    }
+
+    .project_area .project_first,
+    .project_area .project_sec,
+    .project_area .project_joint {
+        height: 90vh;
+    }
+
+    .project_first .project_first_view_box,
+    .project_sec .project_sec_view_box {
+        width: 85%;
+        margin-top: 10%;
+    }
+
+    .project_first .project_first_text,
+    .project_sec .project_sec_text {
+        padding-top: 15%;
+    }
+
+    .project_first .project_first_text dt,
+    .project_sec .project_sec_text dt {
+        font-size: 1.4rem;
+    }
+
+    .project_first .project_first_text dd,
+    .project_sec .project_sec_text dd {
+        font-size: 1.35rem;
+    }
+
     /********* 마지막 페이지 - contact_page_wrap *********/
+    #contact_page_wrap {
+        height: 100vh;
+    }
+
     .contact_page_box .cotact_contacts {
         display: flex;
         text-align: center;
@@ -382,18 +453,42 @@
         font-size: 4.8rem;
     }
 
+    /************** 첫 페이지 - nav_page **************/
+    body .nav_page {
+        height: 100vh;
+    }
+
+    .nav_page .first_bg {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .nav_page .first_bg_1,
+    .nav_page .first_bg_2 {
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        letter-spacing: -2rem;
+    }
+
+    .nav_page .first_bg_1 span {
+        position: relative;
+        top: 7%;
+    }
+
+    .nav_page_area .first_bg li {
+        font-size: 40vw;
+    }
+
+    .nav_page nav .gnb_btn {
+        width: 24%;
+        top: 6%;
+        left: 8%;
+    }
+
     /*********  두번째 페이지 - about_page_wrap  **********/
-    .about_info .about_info_text h3 {
-        font-size: 1.6rem;
-    }
-
-    .about_info_intro .about_info_text p {
-        font-size: 1.16rem;
-    }
-
-    .about_info_list .about_info_list_box dt {
-        float: initial;
-        padding-bottom: 10px;
+    .about_info .about_info_text {
+        padding: 5% 7% 0;
     }
 
     .about_info_list .about_info_list_box dd {
@@ -401,6 +496,9 @@
     }
 
     /************** 세번째 페이지 - skills page **********/
+    #skills_page_wrap {
+        width: 100vh;
+    }
 
     .skills_page_area .skills_list li {
         height: 120px;
@@ -415,48 +513,41 @@
     }
 
     .skills_page_area .skills_list {
-        padding: 10% 0;
+        padding-top: 17%;
     }
 
     /********* 네번째 페이지 - project_page_wrap *********/
-    .project_page_header #circle_svg {
-        width: 150px;
-        height: 150px;
-    }
 
     .project_page_header .project_title li {
-        font-size: 5.6rem;
+        font-size: 6.6rem;
+    }
+
+    .project_page_header .project_title {
+        top: 20%;
     }
 
     .project_page_header .project_page_text {
-        padding: 20% 5% 5%;
-        font-size: 1.157rem;
+        padding-top: 71%;
     }
 
-    .project_area .project_viewF span {
-        top: -23px;
-        font-size: 3.2rem;
+    .project_first .project_first_view_box,
+    .project_sec .project_sec_view_box {
+        width: 90%;
+        margin-top: 15%;
     }
 
-    .project_area .project_viewF h3 {
-        bottom: -14px;
-        font-size: 2rem;
+    .project_joint .project_joint_listBox ul {
+        flex-basis: 32%;
     }
 
-    .project_area .project_first_text dt,
-    .project_area .project_sec_text dt {
-        font-size: 1.2rem;
+    .project_joint .project_joint_title {
+        position: relative;
+        padding-top: 15%;
+        z-index: 1;
     }
 
-    .project_area .project_first_text dd,
-    .project_area .project_sec_text dd {
-        font-size: 1.15rem;
-    }
 
     /********* 마지막 페이지 - contact_page_wrap *********/
-    #contact_page_wrap {
-        height: 100vmin;
-    }
 
     .contact_page_area .contact_page_box {
         padding-top: 10%;
@@ -494,8 +585,14 @@
         font-size: 4.1rem;
     }
 
+    /************** 첫 페이지 - nav_page **************/
     .nav_page nav .gnb_btn {
-        width: 14%;
+        width: 26%;
+        top: 5%;
+    }
+
+    .nav_page_area .first_bg li {
+        font-size: 41vw;
     }
 
     .about_img_area .about_line {
@@ -503,12 +600,21 @@
         left: -20%;
     }
 
-    .about_info .about_info_text h3 {
-        font-size: 1.5rem;
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    .about_box .about_box_bg li {
+        font-size: 8.8vw;
     }
 
-    .about_info_intro .about_info_text p {
-        font-size: 1.1rem;
+    .about_box .about_img_area {
+        width: 50%;
+    }
+
+    .about_info .about_info_text {
+        padding: 5% 4% 0;
+    }
+
+    .about_info_list .about_education p {
+        text-indent: 23%;
     }
 
     .about_info_list .about_info_list_box dd {
@@ -516,15 +622,18 @@
         text-indent: -1rem;
     }
 
-    .skills_list .jQ_logo img {
-        width: 74px;
-    }
-
+    /********* 네번째 페이지 - project_page_wrap *********/
     .project_page_header #circle_svg {
-        width: 140px;
+        width: 180px;
     }
 
     .project_page_header .project_title li {
-        font-size: 5.1rem;
+        font-size: 6.6rem;
     }
+
+    .project_page_header .project_page_text {
+        padding-top: 66%;
+    }
+
+
 }

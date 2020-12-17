@@ -575,7 +575,7 @@ nav .gnb_btn {
     width: 1440px;
     max-width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .project_joint_listBox ul {
