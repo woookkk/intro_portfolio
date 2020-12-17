@@ -1,0 +1,530 @@
+@media only screen and (max-width: 1600px) {
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+
+    #about_page_wrap {
+        padding: 2%;
+    }
+
+    /************** 세번째 페이지 - skills page **********/
+    #skills_page_wrap {
+        padding: 0 2% 2% 2%;
+    }
+
+    /********* 마지막 페이지 - contact_page_wrap *********/
+    #contact_page_wrap {
+        padding: 2%;
+    }
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+
+
+    .about_info_list .about_info_list_box {
+        font-size: 1.1rem;
+    }
+
+    .about_info_intro .about_info_text h3 {
+        font-size: 1.95rem;
+    }
+
+    .about_info_intro .about_info_text p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1440px) {}
+
+@media only screen and (max-width: 1350px) {
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+
+
+    .about_info_list .about_info_list_box dl {
+        right: 0;
+    }
+
+    .about_info_list .about_education p {
+        text-indent: 25%;
+    }
+
+    .about_info_list .about_info_list_box dl:not(:last-child)::before {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1281px) {}
+
+/* 1024px - ipad pro */
+@media only screen and (max-width: 1024px) {
+
+    /************** 첫 페이지 - nav_page **************/
+    body .nav_page {
+        height: 80vmin;
+    }
+
+    .nav_page nav .gnb_btn {
+        width: 12%;
+        top: 12%;
+        right: 3%;
+    }
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    .inbox {
+        padding: 5%;
+    }
+
+    body .title_F p {
+        font-size: 1.2rem;
+    }
+
+    body .title_F h2 {
+        font-size: 7.5rem;
+    }
+
+    .about_box .about_img_area {
+        width: 38%;
+    }
+
+    .about_info .about_title p {
+        padding-top: 3%;
+    }
+
+    .about_info .about_info_intro {
+        display: block;
+    }
+
+    .about_info .about_info_text {
+        padding: 0;
+    }
+
+    .about_info .about_info_text h3 {
+        padding-bottom: 20px;
+        font-size: 1.85rem;
+    }
+
+    .about_info .about_info_text_2 {
+        padding: 0;
+    }
+
+    .about_info .about_info_text p br {
+        display: none;
+    }
+
+    .about_info .about_info_list_box {
+        margin-left: 0;
+        padding-top: 3%;
+    }
+
+    .about_info_list .about_education p {
+        text-indent: 15%;
+    }
+
+    /************** 세번째 페이지 - skills page **********/
+    .skills_page_area .skills_title p {
+        padding-top: 3%;
+    }
+
+    .skills_list .jQ_logo img {
+        width: 150px;
+    }
+
+    /********* 네번째 페이지 - project_page_wrap *********/
+    .project_page_header .project_title li {
+        font-size: 8rem;
+    }
+
+    .project_page_header .project_page_text {
+        padding: 0 0 5% 0;
+        font-size: 1.17rem;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    /* 전체 */
+    html {
+        font-size: 14px;
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    /* 전체 */
+    html {
+        font-size: 13px;
+    }
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    .title_F p {
+        font-size: 1.2rem;
+    }
+
+    /************** 세번째 페이지 - skills page **********/
+    .skills_page_area .skills_list li:not(:nth-child(10)) a {
+        height: 85px;
+    }
+
+    .skills_list .jQ_logo img {
+        width: 125px;
+    }
+
+    /********* 네번째 페이지 - project_page_wrap *********/
+    .project_page_header #circle_svg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project_page_header #circle_svg text {
+        font-size: 3.25rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    /* 전체 */
+    html {
+        font-size: 12px;
+    }
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    #about_page_wrap .about_box {
+        height: 80vmin;
+    }
+
+    /********* 네번째 페이지 - project_page_wrap *********/
+    .project_page_header #circle_svg text {
+        letter-spacing: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* 전체 */
+    body .title_F h2 {
+        font-size: 6.2rem;
+    }
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    .about_info_list .about_education p {
+        text-indent: 22%;
+    }
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    .about_info .about_info_text {
+        padding: 5% 0 10%;
+    }
+
+    /************** 세번째 페이지 - skills page **********/
+    .skills_page_area .skills_list li {
+        width: 25%;
+    }
+
+    .skills_page_area .skills_list li:nth-child(9) {
+        opacity: 0;
+    }
+
+    .skills_page_area .skills_list li:not(:nth-child(10)) a {
+        height: 75px;
+    }
+
+    .skills_list .jQ_logo img {
+        width: 110px;
+    }
+
+    /********* 네번째 페이지 - project_page_wrap *********/
+
+    .project_page_header .project_title li {
+        font-size: 7.8rem;
+    }
+
+    .project_page_header #circle_svg {
+        margin-top: 20%;
+    }
+
+    .project_page_header .project_title {
+        top: 10%;
+    }
+
+    .project_page_header .project_page_text {
+        padding: 20% 5% 5%;
+    }
+
+    .project_page_header .project_page_text br {
+        display: none;
+    }
+
+    .project_area .project_viewF span {
+        top: -32px;
+        font-size: 4rem;
+    }
+
+    .project_area .project_viewF h3 {
+        bottom: -20px;
+        font-size: 2.8rem;
+    }
+
+    .contact_page_box .cotact_contacts dt {
+        font-size: 1.8rem;
+    }
+
+    .contact_page_box .cotact_contacts dd {
+        font-size: 1.5rem;
+    }
+
+    .contact_page_box .contact_text {
+        font-size: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+    /* 전체 */
+    body .title_F h2 {
+        font-size: 5.6rem;
+    }
+
+    body .title_F p {
+        font-size: 1.1rem;
+    }
+
+    /************** 첫 페이지 - nav_page **************/
+    .nav_page_area .first_bg li {
+        font-size: 31vw;
+    }
+
+    .nav_page_area .first_bg li span {
+        top: -10px;
+    }
+
+    .about_info .about_info_text h3 {
+        font-size: 1.75rem;
+    }
+
+    .about_info_text .break {
+        display: block;
+    }
+
+    .about_info_list .about_info_list_box dd {
+        padding-left: 25%;
+    }
+
+    .about_info_list .about_education p {
+        text-indent: 25%;
+    }
+
+
+    /********* 네번째 페이지 - project_page_wrap *********/
+    .project_page_header .project_title li {
+        font-size: 7rem;
+    }
+
+    .project_page_header #circle_svg {
+        width: 190px;
+        height: 190px;
+    }
+
+    .project_page_header .project_page_text {
+        padding: 15% 5% 5%;
+    }
+
+    .project_area .project_viewF span {
+        top: -30px;
+        font-size: 3.8rem;
+    }
+
+    .project_area .project_viewF h3 {
+        bottom: -18px;
+        font-size: 2.5rem;
+    }
+
+    /********* 마지막 페이지 - contact_page_wrap *********/
+    .contact_page_box .cotact_contacts {
+        display: flex;
+        text-align: center;
+    }
+
+    .contact_page_box .cotact_contacts dl {
+        flex: 1;
+    }
+
+    .contact_page_box .contact_text {
+        font-size: 2.45rem;
+    }
+
+    .contact_page_box .cotact_contacts dt {
+        font-size: 1.5rem;
+    }
+
+    .contact_page_box .cotact_contacts dd {
+        font-size: 1.4rem;
+    }
+
+    .contact_page_box .contact_text {
+        padding: 2% 0 4%;
+    }
+}
+
+/* 아이폰 6/7/8 plus - 414px*/
+@media only screen and (max-width: 415px) {
+
+    /* 전체 */
+    body .title_F h2 {
+        font-size: 4.8rem;
+    }
+
+    /*********  두번째 페이지 - about_page_wrap  **********/
+    .about_info .about_info_text h3 {
+        font-size: 1.6rem;
+    }
+
+    .about_info_intro .about_info_text p {
+        font-size: 1.16rem;
+    }
+
+    .about_info_list .about_info_list_box dt {
+        float: initial;
+        padding-bottom: 10px;
+    }
+
+    .about_info_list .about_info_list_box dd {
+        padding-left: 0;
+    }
+
+    /************** 세번째 페이지 - skills page **********/
+
+    .skills_page_area .skills_list li {
+        height: 120px;
+    }
+
+    .skills_page_area .skills_list li:not(:nth-child(10)) a {
+        height: 60px;
+    }
+
+    .skills_list .jQ_logo img {
+        width: 80px;
+    }
+
+    .skills_page_area .skills_list {
+        padding: 10% 0;
+    }
+
+    /********* 네번째 페이지 - project_page_wrap *********/
+    .project_page_header #circle_svg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project_page_header .project_title li {
+        font-size: 5.6rem;
+    }
+
+    .project_page_header .project_page_text {
+        padding: 20% 5% 5%;
+        font-size: 1.157rem;
+    }
+
+    .project_area .project_viewF span {
+        top: -23px;
+        font-size: 3.2rem;
+    }
+
+    .project_area .project_viewF h3 {
+        bottom: -14px;
+        font-size: 2rem;
+    }
+
+    .project_area .project_first_text dt,
+    .project_area .project_sec_text dt {
+        font-size: 1.2rem;
+    }
+
+    .project_area .project_first_text dd,
+    .project_area .project_sec_text dd {
+        font-size: 1.15rem;
+    }
+
+    /********* 마지막 페이지 - contact_page_wrap *********/
+    #contact_page_wrap {
+        height: 100vmin;
+    }
+
+    .contact_page_area .contact_page_box {
+        padding-top: 10%;
+    }
+
+    .contact_page_box .contact_text {
+        padding: 2% 0 10%;
+        font-size: 2.2rem;
+    }
+
+    .contact_page_box .cotact_contacts dt {
+        font-size: 1.3rem;
+    }
+
+    .contact_page_box .cotact_contacts dd {
+        font-size: 1.2rem;
+    }
+
+    .contact_page_box .contact_last {
+        font-size: 1.1rem;
+        padding-top: 5%;
+    }
+}
+
+
+/* 아이폰 6/7/8 plus - 375px*/
+@media only screen and (max-width: 376px) {
+
+    /* 전체 */
+    body .title_F p {
+        font-size: 1rem;
+    }
+
+    body .title_F h2 {
+        font-size: 4.1rem;
+    }
+
+    .nav_page nav .gnb_btn {
+        width: 14%;
+    }
+
+    .about_img_area .about_line {
+        top: -17%;
+        left: -20%;
+    }
+
+    .about_info .about_info_text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about_info_intro .about_info_text p {
+        font-size: 1.1rem;
+    }
+
+    .about_info_list .about_info_list_box dd {
+        padding-left: 0;
+        text-indent: -1rem;
+    }
+
+    .skills_list .jQ_logo img {
+        width: 74px;
+    }
+
+    .project_page_header #circle_svg {
+        width: 140px;
+    }
+
+    .project_page_header .project_title li {
+        font-size: 5.1rem;
+    }
+}

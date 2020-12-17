@@ -1,0 +1,679 @@
+@charset "utf-8";
+
+@import url(common.css);
+@import url(core.css);
+@import url(reset.css);
+@import url(media.css);
+
+
+/************** 첫 페이지 - nav_page **************/
+.nav_page {
+    position: relative;
+    height: 100vmin;
+    background-color: #efe8d7;
+    overflow: hidden;
+}
+
+.nav_page_area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.first_bg {
+    /* position: relative;
+    top: 50%;
+    transform: translateY(-50%);*/
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.first_bg li {
+    font-weight: bold;
+    font-size: 29vw;
+    line-height: .9;
+    color: #002A5A;
+}
+
+.first_bg li span {
+    position: relative;
+    top: -33px;
+}
+
+.first_bg_2 {
+    text-align: right;
+}
+
+/* nav */
+.gnb_btn img {
+    width: 100%;
+}
+
+nav .gnb_btn {
+    position: absolute;
+    width: 10%;
+    top: 15%;
+    right: 5%;
+}
+
+.gnb_btn {
+    /*애니메이션(이시이지반방마)*/
+    animation: gnbAni .5s linear infinite alternate;
+}
+
+@keyframes gnbAni {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+/*
+.gnb_wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}*/
+.gnb_box {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(20deg);
+    background-color: rgba(213, 120, 86, 0.98);
+    display: none;
+}
+
+.gnb_list {
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    width: 100%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+
+}
+
+.gnb_list li a {
+    font-size: 5.3rem;
+    line-height: 1.2;
+    font-family: 'Montserrat-Regular';
+    font-weight: bold;
+}
+
+.close_btn img {
+    width: 30px;
+}
+
+.close_btn {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    transform: rotate(-18deg);
+    transition: 1.0s ease all;
+    cursor: pointer;
+}
+
+.close_btn:hover {
+    transform: rotate(360deg);
+    transform-origin: center;
+    transition: transform 1.0s ease all;
+}
+
+.underline::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0;
+    height: 10px;
+    bottom: 20px;
+    left: -2px;
+    border-radius: 5px;
+    background-color: rgba(222, 184, 114, 0.88);
+    transition: width .4s;
+}
+
+.gnb_list li a {
+    display: inline-block;
+}
+
+.gnb_list li a:hover::after {
+    width: 100%;
+}
+
+/************ 두번째 페이지 - about_page_wrap ************/
+
+#about_page_wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #002A5A;
+}
+
+/* about_box */
+
+.about_box {
+    height: 100vmin;
+}
+
+.about_box_area {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    outline: 1px dotted red;
+}
+
+.about_box_bg {
+    text-align: center;
+}
+
+.about_box_bg li {
+    font-family: 'Montserrat-Regular';
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 6.5vw;
+    font-weight: 700;
+    display: block;
+}
+
+.about_img_area {
+    position: absolute;
+    width: 33%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about_box img {
+    width: 100%;
+}
+
+.about_line {
+    position: absolute;
+    top: -15%;
+    left: -18%;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #3D9D91;
+}
+
+/* about_info */
+.about_info {
+    padding-bottom: 5%;
+}
+
+.about_title {
+    color: #EECABE;
+}
+
+.about_title p {
+    padding-top: 5%;
+    font-size: 1.5rem;
+}
+
+.about_title h2 {
+    font-family: 'Montserrat-Bold';
+    font-size: 8.5rem;
+    font-weight: 900;
+    letter-spacing: -0.5rem;
+}
+
+/* about 설명글 */
+
+.about_info_intro {
+    margin-top: 5%;
+    display: flex;
+    color: #fff;
+}
+
+.about_info_text {
+    flex: 1;
+    padding: 20px 0 0 20px;
+}
+
+.about_info_list {
+    flex: 1;
+}
+
+.about_info_text h3 {
+    line-height: 1.5;
+    font-size: 2rem;
+}
+
+.about_info_text p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.about_info_text_2 {
+    padding: 5% 0;
+}
+
+.about_info_list_box {
+    margin-left: 10%;
+    font-size: 1.1rem;
+}
+
+.about_info_list_box span {
+    padding-right: 20px;
+}
+
+.about_info_list_box dt {
+    float: left;
+    color: #F6E118;
+    font-family: 'Rock_Salt';
+}
+
+.about_info_list_box dd {
+    padding-left: 30%;
+    line-height: 2;
+}
+
+.about_info_list_box dl {
+    position: relative;
+    right: -5%;
+    padding-bottom: 3%;
+}
+
+.about_info_list_box dl:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    bottom: 0;
+    background-color: #F6E118;
+}
+
+.about_education p {
+    text-indent: 22%;
+}
+
+/************** 세번째 페이지 - skills page **************/
+
+#skills_page_wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #D2D2D2;
+}
+
+.skills_page_area {
+    /*width: 90%;*/
+}
+
+.skills_title {
+    color: #1D8883;
+}
+
+.skills_title p {
+    padding-top: 5%;
+    font-size: 1.5rem;
+}
+
+.skills_title h2 {
+    font-family: 'Montserrat-Bold';
+    font-size: 8.5rem;
+    letter-spacing: -0.3rem;
+    font-weight: 900;
+}
+
+.skills_list {
+    padding: 5% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.skills_list li {
+    width: 21%;
+    height: 150px;
+    margin-top: -1px;
+    margin-left: -1px;
+    border: 1px solid #1D8883;
+}
+
+@keyframes waveAni {
+    0% {
+        background-position: 0 10%;
+    }
+
+    /*
+    10%{
+        background-position: 0 20%;
+    }
+    40%{
+        background-position: -10% -40%;
+    }
+    80%{
+        background-position: -20% -50px;
+    }
+    100%{
+        background-position: 2500px 100px;
+    }*/
+}
+
+.skills_list li:nth-child(1),
+.skills_list li:nth-child(4),
+.skills_list li:nth-child(8),
+.skills_list li:nth-child(13),
+.skills_list li:nth-child(16) {
+    opacity: 0;
+}
+
+.skills_list li:nth-child(2) {
+    background: url(../images/skill_up.png) repeat-x bottom;
+    animation: waveAni 3s linear infinite alternate;
+
+}
+
+.skills_list li:not(:nth-child(10)) a {
+    display: block;
+    height: 100px;
+}
+
+.skills_list li a {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.skills_list li img {
+    height: 100%;
+}
+
+.jQ_logo {
+    display: block;
+    height: auto;
+}
+
+.jQ_logo img {
+    width: 180px;
+}
+
+/********** 네번째 페이지 - project_page_wrap **********/
+
+#project_page_wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #A6D1C9;
+}
+
+/* svg  */
+#circle_svg {
+    width: 250px;
+    height: 250px;
+}
+
+#circle_svg path {
+    fill: none;
+}
+
+#circle_svg text {
+    font-family: 'Rock_Salt';
+    fill: #000;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    transform-origin: 50% 50%;
+    /*    transform: rotate(110deg);*/
+}
+
+.text_circle_svg {
+    animation: circle_svg 10s linear infinite;
+}
+
+@keyframes circle_svg {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 헤더 영역 */
+.project_page_header {
+    position: relative;
+    /*width: 90%;*/
+    padding-top: 3%;
+    color: #E83C38;
+}
+
+.project_page_text {
+    padding: 0 0 5% 3%;
+    color: #4a473c;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+.project_title {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+}
+
+.project_title p {
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.project_title li {
+    position: relative;
+    font-family: 'Montserrat-Bold';
+    font-size: 10rem;
+    letter-spacing: -0.3rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.project_title li:not(:first-child) {
+    margin-top: -13%;
+}
+
+.project_title li:nth-child(1) {
+    z-index: 4;
+}
+
+.project_title li:nth-child(2) {
+    color: rgba(232, 60, 56, 0.7);
+    z-index: 3;
+}
+
+.project_title li:nth-child(3) {
+    color: rgba(232, 60, 56, 0.5);
+    z-index: 2;
+}
+
+.project_title li:nth-child(4) {
+    color: rgba(232, 60, 56, 0.4);
+    z-index: 1;
+}
+
+.project_title li:nth-child(5) {
+    color: rgba(232, 60, 56, 0.2);
+}
+
+/* 프로젝트 박스 */
+.project_first {
+    padding: 7% 0 5%;
+}
+
+.project_sec {
+    padding: 10% 0 5%;
+}
+
+.project_first.inbox,
+.project_sec.inbox {
+    width: 1200px;
+}
+
+.project_first_view_box,
+.project_sec_view_box {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    outline: 1px solid #000;
+}
+
+.project_first_view_box span,
+.project_first_view_box h3,
+.project_sec_view_box span,
+.project_sec_view_box h3 {
+    position: absolute;
+}
+
+.project_first_view_box span,
+.project_sec_view_box span {
+    top: -50px;
+    left: -20px;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.project_first_view_box h3,
+.project_sec_view_box h3 {
+    bottom: -33px;
+    right: -38px;
+    font-size: 3.5rem;
+    font-family: 'Montserrat-Bold';
+}
+
+.project_first_text,
+.project_sec_text {
+    display: flex;
+    padding-top: 5%;
+    text-align: center;
+    justify-content: center;
+}
+
+.project_first_text dt,
+.project_sec_text dt {
+    font-family: 'Rock_Salt';
+    color: #E83C38;
+    font-size: 1.25rem;
+    padding-bottom: 10%;
+}
+
+.project_first_text dd,
+.project_sec_text dd {
+    text-indent: -40px;
+    /* 기본요소 없애기 */
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.project_first_text dl:first-child,
+.project_sec_text dl:first-child {
+    padding-right: 15%;
+}
+
+/* 공통 프젝 */
+.project_joint {}
+
+.project_joint_listBox {
+    width: 1440px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.project_joint_listBox ul {
+    flex-basis: 30%;
+}
+
+.project_joint_listBox li {
+    position: relative;
+    top: -2%;
+    margin-bottom: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    outline: 1px solid red;
+}
+
+.project_joint_listBox li::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.project_joint.inbox {
+    width: 1200px;
+}
+
+.project_joint_title {
+    position: relative;
+    padding-top: 5%;
+    z-index: 1;
+}
+
+.project_joint_title span {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.project_joint_title h3 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat-Bold';
+}
+
+
+/********* 마지막 페이지 - contact_page_wrap *********/
+
+#contact_page_wrap {
+    width: 100%;
+    background-color: #D57A58;
+}
+
+.contact_page_area {
+    position: relative;
+    color: #EFE8D7;
+}
+
+.contact_page_box {
+    padding-top: 5%;
+}
+
+.contact_title p {
+    padding-top: 3%;
+    font-size: 1.5rem;
+}
+
+.contact_title h2 {
+    font-family: 'Montserrat-Bold';
+    font-size: 8.5rem;
+    letter-spacing: -0.3rem;
+    font-weight: 900;
+}
+
+.contact_text {
+    padding: 2% 0;
+    color: #000;
+    font-size: 3.5rem;
+}
+
+.cotact_contacts dt {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cotact_contacts dl:first-child {
+    padding-bottom: 3%;
+}
+
+.cotact_contacts dd {
+    padding-top: 20px;
+    font-size: 1.7rem;
+    text-indent: -40px;
+}
+
+.cotact_contacts{
+    padding-bottom: 3%;
+}
+
+.contact_last {
+    text-align: center;
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+}
