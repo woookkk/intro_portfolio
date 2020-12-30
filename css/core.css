@@ -3,12 +3,17 @@
 
 /*웹폰트*/
 @font-face {
-    font-family: 'NanumSquareR';
-    src: url(../font/NanumFont/NanumSquareR.ttf) format('truetype'), url(../font/NanumFont/NanumSquareR.woff) format('woff');
+    font-family: 'Bitter-Regular';
+    src: url(../fonts/Bitter/Bitter-Regular.ttf) format('truetype'), url(../font/Bitter/Bitter-Regular.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Telegraf Regular';
+    src: url(../fonts/Telegraf/Telegraf Regular 400.otf) format('opentype'), url(../font/Telegraf/Telegraf Regular 400.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Montserrat-Bold';
     src: url(../fonts/Montserrat/Montserrat-Bold.ttf) format('truetype'), url(../font/Montserrat/Montserrat-Bold.woff) format('woff');
@@ -24,6 +29,12 @@
 @font-face {
     font-family: 'Rock_Salt';
     src: url(../fonts/Rock_Salt/RockSalt-Regular.ttf) format('truetype'), url(../font/Rock_Salt/RockSalt-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KakaoRegular';
+    src: url(../fonts/KakaoRegular.ttf) format('truetype'), url(../font/KakaoRegular.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -49,7 +60,7 @@
 
 /*공통*/
 body {
-    font-family: 'Montserrat-Regular';
+    font-family: 'KakaoRegular';
     color: #222;
     font-size: 1rem;
     max-width: 1920px;

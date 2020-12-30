@@ -1,5 +1,10 @@
 @media only screen and (max-width: 1600px) {
 
+    /************** 첫 페이지 - nav_page **************/
+    nav .gnb_box {
+        width: 50vw;
+    }
+
     /*********  두번째 페이지 - about_page_wrap  **********/
 
     #about_page_wrap {
@@ -9,11 +14,6 @@
     /************** 세번째 페이지 - skills page **********/
     #skills_page_wrap {
         padding: 0 2% 2% 2%;
-    }
-
-    /********* 마지막 페이지 - contact_page_wrap *********/
-    #contact_page_wrap {
-        padding: 2%;
     }
 
 }
@@ -34,12 +34,35 @@
     .about_info_intro .about_info_text p {
         font-size: 1.2rem;
     }
+
+    /********* 마지막 페이지 - contact_page_wrap *********/
+    .contact_page_area .contact_text {
+        margin-top: 2%;
+    }
+
+    .contact_page_area .contact_last {
+        font-size: 1.9rem;
+    }
+
+    .contact_page_area .copy_box::after {
+        width: 7rem;
+        height: 7rem;
+        font-size: 1.1rem;
+    }
+
+    .contact_page_area .cotact_contacts dd {
+        font-size: 2rem;
+    }
 }
 
 @media only screen and (max-width: 1350px) {
 
     /*********  두번째 페이지 - about_page_wrap  **********/
 
+
+    .about_info_list .about_info_list_box {
+        margin-left: 0;
+    }
 
     .about_info_list .about_info_list_box dl {
         right: 0;
@@ -54,8 +77,6 @@
     }
 }
 
-@media only screen and (max-width: 1281px) {}
-
 /* 1024px - ipad pro */
 @media only screen and (max-width: 1024px) {
 
@@ -69,6 +90,15 @@
         width: 14%;
         top: 12%;
         right: 3%;
+    }
+
+    nav .gnb_box {
+        width: 55vw;
+        height: 110%;
+    }
+
+    nav .gnb_list li a {
+        font-size: 6vw;
     }
 
     /*********  두번째 페이지 - about_page_wrap  **********/
@@ -119,11 +149,11 @@
 
     .about_info .about_info_list_box {
         margin-left: 0;
-        padding-top: 3%;
+        padding-top: 5%;
     }
 
     .about_info_list .about_education p {
-        text-indent: 15%;
+        text-indent: 17%;
     }
 
     /************** 세번째 페이지 - skills page **********/
@@ -135,6 +165,28 @@
         width: 150px;
     }
 
+    .skills_list .jQ_logo .wave {
+        top: 300%;
+    }
+
+    .skills_page_area .skills_list li:nth-child(2):hover .wave,
+    .skills_page_area .skills_list li:nth-child(3):hover .wave,
+    .skills_page_area .skills_list li:nth-child(5):hover .wave,
+    .skills_page_area .skills_list li:nth-child(7):hover .wave {
+        top: 8%;
+    }
+
+    .skills_page_area .skills_list li:nth-child(14):hover .wave,
+    .skills_page_area .skills_list li:nth-child(15):hover .wave {
+        top: 50%;
+    }
+
+
+    .skills_page_area .skills_list li:nth-child(12):hover .wave {
+        top: 35%;
+    }
+
+
     /********* 네번째 페이지 - project_page_wrap *********/
     .project_page_header .project_title li {
         font-size: 8rem;
@@ -143,6 +195,70 @@
     .project_page_header .project_page_text {
         padding: 0 0 5% 0;
         font-size: 1.17rem;
+    }
+
+    .project_area .project_first_view_box,
+    .project_area .project_sec_view_box {
+        width: 80%;
+    }
+
+    .project_area .project_first_text,
+    .project_area .project_sec_text {
+        padding-top: 15%;
+    }
+
+    .project_area .project_first_text dd,
+    .project_area .project_sec_text dd {
+        font-size: 1.7rem;
+    }
+
+    .project_area .project_first_text dt,
+    .project_area .project_sec_text dt {
+        font-size: 1.9rem;
+    }
+
+    .project_area .project_joint.inbox {
+        height: 100vh;
+    }
+
+    .project_area .project_join_view {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    /********* 마지막 페이지 - contact_page_wrap *********/
+
+    .contact_page_area .contact_text {
+        margin-top: 28%;
+    }
+
+    .contact_page_area .conT_break {
+        display: inline-block;
+    }
+
+    .contact_page_area .cotact_contacts {
+        top: 56%;
+        height: 50vmin;
+    }
+
+    .contact_page_area .cotact_contacts dd {
+        font-size: 2.5rem;
+    }
+
+    .contact_page_area .cotact_contacts dt {
+        font-size: 2.5rem;
+    }
+
+    .contact_page_area .cotact_contacts dl:first-child {
+        padding-bottom: 10%;
+    }
+
+    .contact_page_area .copy_box::after {
+        width: 8rem;
+        height: 8rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -154,7 +270,27 @@
         font-size: 14px;
     }
 
+    /************** 세번째 페이지 - skills page **********/
+    .skills_list .jQ_logo .wave {
+        top: 310%;
+    }
 
+    /********* 마지막 페이지 - contact_page_wrap *********/
+    .contact_page_area .conT_break {
+        display: block;
+    }
+
+    .contact_page_area .contact_text {
+        margin-top: 10%;
+    }
+
+    .contact_page_area .contact_text p {
+        transform: translateY(-8%);
+    }
+
+    .contact_page_area .contact_text span {
+        left: 70%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -198,9 +334,35 @@
         font-size: 12px;
     }
 
+    /************** 세번째 페이지 - skills page **********/
+    .skills_page_area .wave {
+        top: 175%;
+    }
+
+    .skills_list .jQ_logo .wave {
+        top: 363%;
+    }
+
     /********* 네번째 페이지 - project_page_wrap *********/
     .project_page_header #circle_svg text {
         letter-spacing: 0.7rem;
+    }
+
+    /********* 마지막 페이지 - contact_page_wrap *********/
+    .contact_page_area .conT_break {
+        display: inline-block;
+    }
+
+    .contact_page_area .contact_text {
+        margin-top: 28%;
+    }
+
+    .contact_page_area .contact_text p {
+        transform: translatex(-50%);
+    }
+
+    .contact_page_area .contact_text span {
+        left: 55%;
     }
 }
 
@@ -355,6 +517,15 @@
         text-indent: 25%;
     }
 
+    /************** 세번째 페이지 - skills page **********/
+
+    .skills_page_area .wave {
+        top: 191%;
+    }
+
+    .skills_list .jQ_logo .wave {
+        top: 400%;
+    }
 
     /********* 네번째 페이지 - project_page_wrap *********/
     #project_page_wrap .project_page_header {
@@ -415,33 +586,28 @@
     }
 
     /********* 마지막 페이지 - contact_page_wrap *********/
-    #contact_page_wrap {
-        height: 100vh;
+    .contact_page_area .contact_text p {
+        font-size: 2.6rem;
     }
 
-    .contact_page_box .cotact_contacts {
-        display: flex;
-        text-align: center;
-    }
-
-    .contact_page_box .cotact_contacts dl {
-        flex: 1;
-    }
-
-    .contact_page_box .contact_text {
-        font-size: 2.45rem;
-    }
-
-    .contact_page_box .cotact_contacts dt {
-        font-size: 1.5rem;
+    .contact_page_area .contact_text span {
+        font-size: 1.85rem;
     }
 
     .contact_page_box .cotact_contacts dd {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 
-    .contact_page_box .contact_text {
-        padding: 2% 0 4%;
+    .contact_page_area .contact_last {
+        font-size: 1.6rem;
+    }
+
+    .contact_page_area .copy_box::after {
+        width: 6rem;
+        height: 6rem;
+        right: -4%;
+        top: -9%;
+        font-size: 1rem;
     }
 }
 
@@ -466,9 +632,10 @@
 
     .nav_page .first_bg_1,
     .nav_page .first_bg_2 {
+/*        transform: rotate(90deg);*/
         text-orientation: upright;
         writing-mode: vertical-rl;
-        letter-spacing: -2rem;
+        letter-spacing: -5rem;
     }
 
     .nav_page .first_bg_1 span {
@@ -547,29 +714,6 @@
     }
 
 
-    /********* 마지막 페이지 - contact_page_wrap *********/
-
-    .contact_page_area .contact_page_box {
-        padding-top: 10%;
-    }
-
-    .contact_page_box .contact_text {
-        padding: 2% 0 10%;
-        font-size: 2.2rem;
-    }
-
-    .contact_page_box .cotact_contacts dt {
-        font-size: 1.3rem;
-    }
-
-    .contact_page_box .cotact_contacts dd {
-        font-size: 1.2rem;
-    }
-
-    .contact_page_box .contact_last {
-        font-size: 1.1rem;
-        padding-top: 5%;
-    }
 }
 
 

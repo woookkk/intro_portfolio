@@ -18,4 +18,17 @@ $(function () { //////// jQB //////////////
         speed: -1
     });
 */
+
+    /* 컨텍 영역 타이패드 */
+    
+   var typed5 = new Typed('#typed5', {
+    strings: ['<i>strings</i>', '<strong>HTML</strong>', '3 Chars &times; &copy;'],
+    typeSpeed: 3,
+    backSpeed: 2,
+    cursorChar: '_',
+    shuffle: true,
+    smartBackspace: false,
+    loop: true
+  });
+    
 }); ////////////// jQB /////////////////////////
