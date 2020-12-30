@@ -523,7 +523,7 @@ nav .gnb_btn {
 
 .project_title li {
     position: relative;
-    font-family: 'Bitter-Regular';
+    font-family: 'Montserrat-Bold';
     font-size: 10rem;
     /*    letter-spacing: -0.3rem;*/
     font-weight: 900;
@@ -539,22 +539,34 @@ nav .gnb_btn {
 }
 
 .project_title li:nth-child(2) {
-    color: rgba(232, 60, 56, 0.7);
+    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-fill-color: transparent;
+/*    color: rgba(232, 60, 56, 0.7);*/
+    opacity: .7;
     z-index: 3;
 }
 
 .project_title li:nth-child(3) {
-    color: rgba(232, 60, 56, 0.5);
+    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-fill-color: transparent;
+/*    color: rgba(232, 60, 56, 0.5);*/
+    opacity: .5;
     z-index: 2;
 }
 
 .project_title li:nth-child(4) {
-    color: rgba(232, 60, 56, 0.4);
+    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-fill-color: transparent;
+/*    color: rgba(232, 60, 56, 0.4);*/
+    opacity: .4;
     z-index: 1;
 }
 
 .project_title li:nth-child(5) {
-    color: rgba(232, 60, 56, 0.2);
+    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-fill-color: transparent;
+/*    color: rgba(232, 60, 56, 0.2);*/
+    opacity: .2;
 }
 
 /* 프로젝트 박스 */

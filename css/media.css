@@ -632,10 +632,13 @@
 
     .nav_page .first_bg_1,
     .nav_page .first_bg_2 {
-/*        transform: rotate(90deg);*/
         text-orientation: upright;
         writing-mode: vertical-rl;
-        letter-spacing: -5rem;
+        letter-spacing: -4rem;
+    }
+
+    .nav_page_area .first_bg li span {
+        top: -20px;
     }
 
     .nav_page .first_bg_1 span {
@@ -653,6 +656,32 @@
         left: 8%;
     }
 
+    nav .gnb_box {
+        width: 90vw;
+        height: 60%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+
+    nav .gnb_list li a {
+        font-size: 9vw;
+    }
+
+    nav .close_btn {
+        top: 12%;
+        right: 15%;
+    }
+
+    nav .close_btn img {
+        width: 23px;
+    }
+
+    .gnb_box .underline::after {
+        height: 7px;
+        bottom: 6px;
+        left: -2px;
+    }
+
     /*********  두번째 페이지 - about_page_wrap  **********/
     .about_info .about_info_text {
         padding: 5% 7% 0;
@@ -662,9 +691,22 @@
         padding-left: 0;
     }
 
+    .about_info .about_title {
+        padding-top: 10%;
+    }
+
     /************** 세번째 페이지 - skills page **********/
-    #skills_page_wrap {
-        width: 100vh;
+    body #skills_page_wrap {
+        height: 100vh;
+    }
+
+    .skills_page_area .skills_title {
+        padding-top: 5%;
+    }
+
+
+    .skills_page_area .skills_list {
+        padding-top: 17%;
     }
 
     .skills_page_area .skills_list li {
@@ -679,8 +721,12 @@
         width: 80px;
     }
 
-    .skills_page_area .skills_list {
-        padding-top: 17%;
+    .skills_page_area .wave {
+        top: 200%;
+    }
+
+    .skills_list .jQ_logo .wave {
+        top: 442%;
     }
 
     /********* 네번째 페이지 - project_page_wrap *********/
@@ -713,6 +759,38 @@
         z-index: 1;
     }
 
+    /********* 마지막 페이지 - contact_page_wrap *********/
+    .contact_page_area .cotact_contacts {
+        height: 65vmin;
+    }
+
+    .contact_page_area .contact_text {
+        margin-top: 35%;
+    }
+
+    .contact_page_area .contact_text p {
+        font-size: 2.2rem;
+    }
+
+    .contact_page_area .contact_text span {
+        font-size: 1.8rem;
+        top: 29%;
+        left: 56%;
+    }
+
+    .contact_page_box .cotact_contacts dt {
+        font-size: 1.75rem;
+        -webkit-text-stroke: 1px #1c1c1c;
+    }
+
+    .contact_page_area .contact_last {
+        font-size: 1.4rem;
+    }
+
+    .contact_page_area #arrow_svg {
+        width: 40px;
+        height: 40px;
+    }
 
 }
 

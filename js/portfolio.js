@@ -19,16 +19,23 @@ $(function () { //////// jQB //////////////
     });
 */
 
+    /* 스킬 a 태그 막기 */
+    $(".skills_list li a").click(function (e) {
+        e.preventDefault();
+    });
+
     /* 컨텍 영역 타이패드 */
-    
-   var typed5 = new Typed('#typed5', {
-    strings: ['<i>strings</i>', '<strong>HTML</strong>', '3 Chars &times; &copy;'],
-    typeSpeed: 3,
-    backSpeed: 2,
-    cursorChar: '_',
-    shuffle: true,
-    smartBackspace: false,
-    loop: true
-  });
-    
+
+    var typed5 = new Typed('#typed5', {
+        strings: ['<i>strings</i>', '<strong>HTML</strong>', '3 Chars &times; &copy;'],
+        typeSpeed: 3,
+        backSpeed: 2,
+        cursorChar: '_',
+        shuffle: true,
+        smartBackspace: false,
+        loop: true
+    });
+
+
+
 }); ////////////// jQB /////////////////////////
