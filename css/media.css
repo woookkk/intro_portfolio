@@ -321,7 +321,7 @@
     }
 
     .project_page_header #circle_svg text {
-        font-size: 3.25rem;
+/*        font-size: 3.25rem;*/
     }
 
 }
@@ -345,7 +345,7 @@
 
     /********* 네번째 페이지 - project_page_wrap *********/
     .project_page_header #circle_svg text {
-        letter-spacing: 0.7rem;
+/*        letter-spacing: 0.7rem;*/
     }
 
     /********* 마지막 페이지 - contact_page_wrap *********/

@@ -15,12 +15,19 @@
 </head>
 
 <body>
-   <!-- 첫번째 페이지 -->
+
+    <!-- 노이지 배경 -->
+    <div class="bg_noise"></div>
+    <!-- 첫번째 페이지 -->
     <div class="nav_page">
         <div class="nav_page_area">
-            <ul class="first_bg">
-                <li class="first_bg_1"><span>PORT</span></li>
-                <li class="first_bg_2"><span>FOLIO</span></li>
+            <ul class="first_bg up_on_scroll">
+                <li class="first_bg_1">
+                    <span>PORT</span>
+                </li>
+                <li class="first_bg_2">
+                    <span>FOLIO</span>
+                </li>
             </ul>
             <nav>
                 <a href="#" class="gnb_btn"><img src="images/nav_logo.png" alt="gnb 버튼"></a>
@@ -39,15 +46,15 @@
     </div>
     <!-- 두번째 페이지 -->
     <section id="about_page_wrap">
-       <!-- 사진 영역 -->
+        <!-- 사진 영역 -->
         <div class="about_box inbox">
             <div class="about_box_area">
                 <ul class="about_box_bg">
-                    <li>WOOKYUNG</li>
-                    <li>WOOKYUNG</li>
-                    <li>WOOKYUNG</li>
-                    <li>WOOKYUNG</li>
-                    <li>WOOKYUNG</li>
+                    <li class="up_on_scroll">WOOKYUNG</li>
+                    <li class="up_on_scroll">WOOKYUNG</li>
+                    <li class="up_on_scroll">WOOKYUNG</li>
+                    <li class="up_on_scroll">WOOKYUNG</li>
+                    <li class="up_on_scroll">WOOKYUNG</li>
                 </ul>
                 <div class="about_img_area">
                     <img src="images/about_page.png" alt="최우경사진">
@@ -57,20 +64,21 @@
         </div>
         <!-- 소개 영역 -->
         <div class="about_info inbox">
-            <div class="about_title title_F">
+            <div class="about_title title_F up_on_scroll">
                 <p>.01</p>
                 <h2>WHO AM I</h2>
             </div>
-            <ul class="about_info_intro">
+            <ul class="about_info_intro up_on_scroll">
                 <li class="about_info_text">
                     <h3>안녕하세요. 어쩌고 저쩌고 <br> 신입 웹퍼블리셔 최우경입니다.</h3>
-                    <p class="about_info_text_2"><span class="break">저는 누구에게나 쉽고, 편리한,</span><br>
-                        매력이 톡톡 터지는 웹사이트를 만들고 싶습니다.</p>
-                    <p>이를 위해 탄탄한 코드와<br>
-                        CSS, JavaScript를 활용한 동적 모션을 연습했으며,<br>
+                    <p class="about_info_text_2"><span class="break">저는 누구나 쉽게 접근할 수 있는</span><br>
+                        편리하고 실용적인 웹사이트를 만들고 싶습니다.</p>
+                    <p>이를 위해 적절한 시멘틱 태그를 사용해<br>
+                        웹구조를 짜고 keyframes을 활용한 동적모션을 연습했으며,<br>
                         지금도 끊임없이 탐구 중에 있습니다.<br>
-                        열려있는 태도로 팀원들과 소통하며 나날이<br>
-                        발전하고 있는 기술에 발맞춰 함께 걸어나가겠습니다.</p>
+                        부족한 것은 열려있는 태도로 배우고<br>
+                        발전하는 기술 흐름을 빠르게 파악하여, 제가 해야 하는 일,<br>
+                        할 수 있는 일을 순차적으로 수행할 것입니다.</p>
                 </li>
                 <li class="about_info_list">
                     <div class="about_info_list_box">
@@ -99,58 +107,64 @@
         </div>
     </section>
     <!-- 세번째 페이지 -->
+    <!-- 따라다닐 커서 -->
+    <div id="cursor">
+        <div class="cursorH">HOVER</div>
+        <div class="cursor"></div>
+    </div>
     <section id="skills_page_wrap">
         <div class="skills_page_area inbox">
-            <div class="skills_title title_F">
+            <div class="skills_title title_F up_on_scroll">
                 <p>.02</p>
                 <h2>SKILLS</h2>
             </div>
             <!-- 스킬 리스트  -->
-            <ul class="skills_list">
+            <ul class="skills_list up_on_scroll">
                 <li></li>
-                <li>
-                    <a href="">
+                <li class="up_on_scroll">
+                    <a href="#">
                         <span class="wave"></span>
-                        <img src="images/skills_html.png" alt="html 로고"></a>
+                        <img src="images/skills_html.png" alt="html 로고">
+                    </a>
                 </li>
-                <li>
-                    <a href="">
+                <li class="up_on_scroll">
+                    <a href="#">
                         <span class="wave"></span>
                         <img src="images/skills_css.png" alt="css 로고"></a>
                 </li>
                 <li></li>
-                <li>
-                    <a href="">
+                <li class="up_on_scroll">
+                    <a href="#">
                         <span class="wave"></span>
                         <img src="images/skills_balsa.png" alt="balsamiq 로고"></a>
                 </li>
                 <li></li>
-                <li>
-                    <a href="">
+                <li class="up_on_scroll">
+                    <a href="#">
                         <span class="wave"></span>
                         <img src="images/skills_xd.png" alt="xd 로고"></a>
                 </li>
                 <li></li>
                 <li></li>
-                <li>
-                    <a href="" class="jQ_logo">
+                <li class="up_on_scroll">
+                    <a href="#" class="jQ_logo">
                         <span class="wave"></span>
                         <img src="images/skills_jQ.png" alt="jQuery 로고"></a>
                 </li>
                 <li></li>
-                <li>
-                    <a href="">
+                <li class="up_on_scroll">
+                    <a href="#">
                         <span class="wave"></span>
                         <img src="images/skills_ps.png" alt="포토샵 로고"></a>
                 </li>
                 <li></li>
-                <li>
-                    <a href="">
+                <li class="up_on_scroll">
+                    <a href="#">
                         <span class="wave"></span>
                         <img src="images/skills_js.png" alt="자바스크립트 로고"></a>
                 </li>
-                <li>
-                    <a href="">
+                <li class="up_on_scroll">
+                    <a href="#">
                         <span class="wave"></span>
                         <img src="images/skills_ai.png" alt="일러스트 로고"></a>
                 </li>
@@ -160,35 +174,30 @@
     </section>
     <!-- 네번째 페이지 -->
     <section id="project_page_wrap">
-       <!-- 프로젝트 헤더 부분 -->
-        <div class="project_page_header inbox">
-            <svg id="circle_svg" viewBox="0 0 500 500">
-                <path d="M243.2, 382.4c-74.8,   
-    0-135.5-60.7-135.5-135.5s60.7-135.5,135.5-135.5s135.5, 60.7, 135.5,
-    135.5 S318, 382.4, 243.2, 382.4z" id="textcircle" />
-                <text class="text_circle_svg">
-                    <textPath href="#textcircle">
-                        LET'S WORK TOGHETER !!
-                    </textPath>
-                </text>
-            </svg>
-            <div class="project_page_text">
-                모든 웹 사이트는 의미가 있으며<br>
-                목표 달성을위한 노력<br>
-                달성하고자하는 목표, 함께 일할 수 있습니다.<br>
-                아래에서 몇 가지를 볼 수 있습니다.<br>
-                내가 일한 프로젝트와 내 기술 세트를 볼 수 있습니다.<br>
-                나는 당신이 그들을 즐기기를 바랍니다.<br>
-                내 높은 수준의 프로젝트를 살펴보십시오.
+        <!-- 프로젝트 헤더 부분 -->
+        <div class="project_page_header inbox up_on_scroll">
+            <div id="circle_svg">
+                <embed src="images/workT.svg" type="image/svg+xml" aria-label="함께일해요!텍스트">
+            </div>
+            <div class="project_page_text up_on_scroll">
+                아래에서는 저의 프로젝트와<br>
+                함께 만든 공통 프로젝트를 보실 수 있습니다.<br>
+                모든 웹 사이트 구현에는 목적이 있으며<br>
+                목적 달성을 위한 노력으로<br>
+                그것에 맞는 요소를 사용하는 것이 필요합니다.<br>
+                기획 단계에서 웹표준과 요즘 트렌드를 파악하여<br>
+                스케치를 하고 와이어프레임을 설계하여 디자인 하였습니다.<br>
+                그 디자인을 바탕으로 사이트를 구현하려 노력 하였습니다.<br>
+                가벼운 마음으로 제 프로젝트들을 살펴보시길 바랍니다.
             </div>
             <div class="project_title title_F">
                 <p>.03</p>
                 <ul>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
-                    <li>Project</li>
+                    <li class="up_on_scroll">Project</li>
+                    <li class="up_on_scroll">Project</li>
+                    <li class="up_on_scroll">Project</li>
+                    <li class="up_on_scroll">Project</li>
+                    <li class="up_on_scroll">Project</li>
                 </ul>
             </div>
         </div>
@@ -196,14 +205,24 @@
         <div class="project_area inbox">
             <div class="project_first inbox">
                 <div class="project_first_view ">
-                    <div class="project_first_view_box ratio_box project_viewF">
+                    <div class="project_first_view_box ratio_box project_viewF up_on_scroll">
                         <span>#01</span>
                         <h3>MOM'S TOUCH</h3>
                     </div>
-                    <div class="project_first_text">
+                    <div class="project_first_text up_on_scroll">
                         <dl>
                             <dt>Concept</dt>
-                            <dd>어쩌고 저쩌고</dd>
+                            <dd>필요한 정보만으로 깔끔하고 간단하게 리디자인 하였습니다.
+                            </dd>
+                            <dd>
+                                맘스터치의 컬러감을 유지하여<br>브랜드의 색을 나타냈습니다.
+                            </dd>
+                            <dd>
+                                가독성을 높이기 위해 불필요한<br>글들은 아이콘으로 대체하였습니다.
+                            </dd>
+                            <dd>
+                                소비자의 입장에서 무엇이 제일 필요한지를 생각하여<br>메뉴 페이지에 가격을 표시하였습니다.
+                            </dd>
                         </dl>
                         <dl>
                             <dt>skill</dt>
@@ -219,21 +238,25 @@
             <!-- 두번째 프로젝트 미술관 -->
             <div class="project_sec inbox">
                 <div class="project_sec_view ">
-                    <div class="project_sec_view_box ratio_box project_viewF">
+                    <div class="project_sec_view_box ratio_box project_viewF up_on_scroll">
                         <span>#02</span>
                         <h3>서울시립미술관</h3>
                     </div>
-                    <div class="project_sec_text">
+                    <div class="project_sec_text up_on_scroll">
                         <dl>
                             <dt>Concept</dt>
-                            <dd>어쩌고 저쩌고</dd>
+                            <dd>지저분한 느낌의 기존 사이트를<br>동적 요소를 추가하여 깔끔하게 리디자인 하였습니다.
+                            </dd>
+                            <dd>마우스 커서를 커스텀하여 사용하므로서<br>사용자의 접근성을 높였습니다.
+                            </dd>
+                            <dd>정보가 한 눈에 보이도록 디자인하여 구현하였습니다.
+                            </dd>
                         </dl>
                         <dl>
                             <dt>skill</dt>
                             <dd>UI,UX Design</dd>
                             <dd>HTML, CSS</dd>
                             <dd>JavaScript, J-Query</dd>
-                            <dd>Media Queries</dd>
                             <dd>Cross Browsing</dd>
                         </dl>
                     </div>
@@ -242,22 +265,21 @@
             <!-- 공통 프젝 영역 -->
             <div class="project_joint inbox">
                 <div class="project_join_view">
-                    <div class="project_joint_title project_viewF">
+                    <div class="project_joint_title project_viewF up_on_scroll">
                         <span>#03</span>
                         <h3>Joint Project</h3>
                     </div>
-                    <div class="project_joint_listBox">
-                        <ul class="rellax1">
+                    <div class="project_joint_listBox up_on_scroll">
+                        <ul class="rellax1 project_joint_list1">
                             <li></li>
                             <li></li>
                             <li></li>
                         </ul>
-                        <ul class="rellax2">
-                            <li></li>
+                        <ul class="rellax2 project_joint_list2">
                             <li></li>
                             <li></li>
                         </ul>
-                        <ul class="rellax1">
+                        <ul class="rellax1 project_joint_list3">
                             <li></li>
                             <li></li>
                             <li></li>
@@ -269,16 +291,16 @@
     </section>
     <!-- 마지막 페이지 -->
     <section id="contact_page_wrap">
-        <div class="contact_page_area inbox">
-            <div class="contact_title title_F">
+        <div class="contact_page_area inbox up_on_scroll">
+            <div class="contact_title title_F up_on_scroll">
                 <p>.04</p>
                 <h2><span class="conT_break">Con</span>tact</h2>
             </div>
             <div class="contact_page_box">
-               <!-- 타이핑 영역 -->
+                <!-- 타이핑 영역 -->
                 <div class="contact_text">
                     <p>WooKyung's</p>
-                    <span id="typed5" style="white-space:pre;">fgdg</span>
+                    <span id="typed5"></span>
                 </div>
                 <!-- 컨텍 박스 정보 -->
                 <div class="cotact_contacts copy_box">
@@ -301,6 +323,7 @@
                 </svg>
             </a>
         </div>
+
 
     </section>
 </body>

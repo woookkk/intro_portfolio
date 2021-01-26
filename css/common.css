@@ -3,6 +3,64 @@
 
 
 
+/*부드러운 화면전환*/
 
+body {
+	animation: fadein 2000ms ease-out;
+	-moz-animation: fadein 2000ms ease-out;
+	/* Firefox */
+	-webkit-animation: fadein 2000ms ease-out;
+	/* Safari and  Chrome */
+	-o-animation: fadein 2000ms ease-out;
+	/* Opera */
+}
 
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
 
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadein {
+
+	/* Firefox */
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+
+	/* Safari and Chrome */
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadein {
+
+	/* Opera */
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/*글씨 드래그시 배경색 변경*/
+::selection { color:white; background:#333; }
+::-moz-selection { color:white; background:#333; } /*firefox*/

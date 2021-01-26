@@ -6,6 +6,16 @@
 @import url(media.css);
 
 
+/* 스크롤시 페이드인 */
+body {
+    position: relative;
+}
+
+.up_on_scroll {
+    transition: transform 1s, opacity 3s;
+}
+
+
 /************** 첫 페이지 - nav_page **************/
 .nav_page {
     position: relative;
@@ -23,8 +33,8 @@
 }
 
 .first_bg {
-    /* position: relative;
-    top: 50%;
+    /*     position: relative;*/
+    /*top: 50%;
     transform: translateY(-50%);*/
     width: 100%;
     font-family: 'Bitter-Regular';
@@ -111,6 +121,7 @@ nav .gnb_btn {
     line-height: 1.2;
     font-family: 'Montserrat-Regular';
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close_btn img {
@@ -273,7 +284,7 @@ nav .gnb_btn {
 
 .about_info_list_box dt {
     float: left;
-    color: #F6E118;
+    color: #eba13d;
     font-family: 'Rock_Salt';
     font-size: 1.25rem;
 }
@@ -296,7 +307,7 @@ nav .gnb_btn {
     width: 90%;
     height: 2px;
     bottom: 0;
-    background-color: #F6E118;
+    background-color: #eba13d;
 }
 
 .about_education p {
@@ -304,6 +315,75 @@ nav .gnb_btn {
 }
 
 /************** 세번째 페이지 - skills page **************/
+
+/* 스킬 마우스 커서 */
+#cursor {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 9999999;
+    pointer-events: none;
+    display: none;
+}
+
+#cursor::after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.cursorH {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1D8883;
+}
+.cursor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px dashed #1D8883;
+    border-radius: 50%;
+    animation: cursorAni .5s infinite alternate;
+}
+
+/* 커서 키프레임 */
+@keyframes cursorAni {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cursorH {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+/*
+.skillP{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}*/
+
+/* 스킬 페이지 */
 
 #skills_page_wrap {
     width: 100%;
@@ -411,7 +491,6 @@ nav .gnb_btn {
     opacity: .4;
 }
 
-
 @keyframes waveAni {
     0% {
         transform: translatex(-50%) rotate(0deg);
@@ -432,6 +511,13 @@ nav .gnb_btn {
 .skills_list li:nth-child(3):hover .wave,
 .skills_list li:nth-child(5):hover .wave,
 .skills_list li:nth-child(7):hover .wave {
+    top: -10%;
+}
+
+.skills_list li:nth-child(2):hover,
+.skills_list li:nth-child(3):hover,
+.skills_list li:nth-child(5):hover,
+.skills_list li:nth-child(7):hover {
     top: -10%;
 }
 
@@ -463,31 +549,22 @@ nav .gnb_btn {
 #project_page_wrap {
     width: 100%;
     height: 100%;
-    background-color: #A6D1C9;
+    background-color: #235c47;
 }
 
 /* svg  */
 #circle_svg {
     width: 250px;
     height: 250px;
-}
-
-#circle_svg path {
-    fill: none;
-}
-
-#circle_svg text {
-    font-family: 'Rock_Salt';
-    fill: #000;
-    font-size: 3rem;
-    letter-spacing: 0.5rem;
-    transform-origin: 50% 50%;
-    /*    transform: rotate(110deg);*/
-}
-
-.text_circle_svg {
+    margin: 2%;
     animation: circle_svg 10s linear infinite;
 }
+
+#circle_svg embed{
+    width: 100%;
+    display: block;
+}
+
 
 @keyframes circle_svg {
     to {
@@ -500,12 +577,12 @@ nav .gnb_btn {
     position: relative;
     /*width: 90%;*/
     padding-top: 3%;
-    color: #E83C38;
+    color: #c23c48;
 }
 
 .project_page_text {
     padding: 0 0 5% 3%;
-    color: #4a473c;
+    color: #EFE8D7;
     font-size: 1.4rem;
     line-height: 2;
 }
@@ -539,37 +616,44 @@ nav .gnb_btn {
 }
 
 .project_title li:nth-child(2) {
-    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.9);
     -webkit-text-fill-color: transparent;
-/*    color: rgba(232, 60, 56, 0.7);*/
     opacity: .7;
     z-index: 3;
 }
 
 .project_title li:nth-child(3) {
-    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.7);
     -webkit-text-fill-color: transparent;
-/*    color: rgba(232, 60, 56, 0.5);*/
     opacity: .5;
     z-index: 2;
 }
 
 .project_title li:nth-child(4) {
-    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.6);
     -webkit-text-fill-color: transparent;
-/*    color: rgba(232, 60, 56, 0.4);*/
     opacity: .4;
     z-index: 1;
 }
 
 .project_title li:nth-child(5) {
-    -webkit-text-stroke: 1px #E83C38;
+    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.5);
     -webkit-text-fill-color: transparent;
-/*    color: rgba(232, 60, 56, 0.2);*/
     opacity: .2;
 }
 
 /* 프로젝트 박스 */
+
+/* 맘터 */
+.project_first_view_box {
+    background: url(../images/moms_P.png) no-repeat center/cover;
+}
+
+/* 미술관 */
+.project_sec_view_box {
+    background: url(../images/museum.png) no-repeat center/cover;
+}
+
 .project_first {
     padding: 7% 0 5%;
 }
@@ -613,14 +697,18 @@ nav .gnb_btn {
     left: -20px;
     font-size: 5rem;
     font-weight: bold;
+    color: #eba13d;
+    text-shadow: 0 0 2px #000;
 }
 
 .project_first_view_box h3,
 .project_sec_view_box h3 {
-    bottom: -33px;
-    right: -38px;
+    bottom: -10%;
+    right: -15%;
     font-size: 3.5rem;
     font-family: 'Telegraf Regular';
+    color: #eba13d;
+    text-shadow: 0 0 2px #000;
 }
 
 .project_first_text,
@@ -634,9 +722,9 @@ nav .gnb_btn {
 .project_first_text dt,
 .project_sec_text dt {
     font-family: 'Rock_Salt';
-    color: #E83C38;
+    color: #eba13d;
     font-size: 1.25rem;
-    padding-bottom: 10%;
+    padding-bottom: 20px;
 }
 
 .project_first_text dd,
@@ -644,7 +732,8 @@ nav .gnb_btn {
     text-indent: -40px;
     /* 기본요소 없애기 */
     font-size: 1.2rem;
-    line-height: 1.5;
+    line-height: 1.8;
+    color: #EFE8D7;
 }
 
 .project_first_text dl:first-child,
@@ -653,7 +742,6 @@ nav .gnb_btn {
 }
 
 /* 공통 프젝 */
-
 .project_joint_listBox {
     width: 1440px;
     max-width: 100%;
@@ -668,9 +756,34 @@ nav .gnb_btn {
 .project_joint_listBox li {
     position: relative;
     top: -2%;
-    margin-bottom: 10%;
     background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 10%;
     outline: 1px solid red;
+}
+
+.project_joint_list1 li:first-child{
+    
+}
+.project_joint_list1 li:nth-child(2){
+    background: url(../images/join_pj_hana.png) no-repeat center/cover;
+}
+.project_joint_list1 li:nth-child(3){
+    background: url(../images/join_pj_altio.png) no-repeat center/cover;
+}
+.project_joint_list2 li:first-child{
+    background: url(../images/join_pj_megabox.png) no-repeat center/cover;
+}
+.project_joint_list2 li:nth-child(2){
+    background: url(../images/join_pj_roamom.png) no-repeat center/cover;
+}
+.project_joint_list3 li:first-child{
+    background: url(../images/join_pj_indigo.png) no-repeat center/cover;
+}
+.project_joint_list3 li:nth-child(2){
+    background: url(../images/join_pj_suhang.png) no-repeat center/cover;
+}
+.project_joint_list3 li:nth-child(3){
+   background: url(../images/join_pj_san.png) no-repeat center/cover;
 }
 
 .project_joint_listBox li::before {
@@ -692,11 +805,15 @@ nav .gnb_btn {
 .project_joint_title span {
     font-size: 5rem;
     font-weight: bold;
+    color: #eba13d;
+    text-shadow: 0 0 2px #000;
 }
 
 .project_joint_title h3 {
     font-size: 3.5rem;
     font-family: 'Telegraf Regular';
+    color: #eba13d;
+    text-shadow: 0 0 2px #000;
 }
 
 
@@ -706,7 +823,7 @@ nav .gnb_btn {
     height: 100vh;
     width: 100%;
     padding: 2%;
-    background-color: #D57A58;
+    background-color: #eba13d;
 }
 
 .contact_page_area {
@@ -714,12 +831,14 @@ nav .gnb_btn {
     text-align: center;
     color: #EFE8D7;
 }
+
 /* 컨텍트 제목 */
 
 .contact_title {
     text-align: left;
 }
-.conT_break{
+
+.conT_break {
     display: block;
 }
 
@@ -758,7 +877,7 @@ nav .gnb_btn {
     position: relative;
     transform: translateX(-50%);
     display: inline-block;
-    color: #333;
+    color: #c23c48;
     font-family: 'Telegraf Regular';
     font-size: 3rem;
     font-weight: 600;
@@ -770,13 +889,14 @@ nav .gnb_btn {
     width: 80%;
     bottom: 0;
     left: 110%;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #c23c48;
 }
 
 .contact_text span {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 55%;
+    letter-spacing: .5rem;
     font-size: 2rem;
 }
 
@@ -784,7 +904,7 @@ nav .gnb_btn {
 .cotact_contacts dt {
     font-size: 2rem;
     font-weight: 600;
-    -webkit-text-stroke: 1.5px #1c1c1c;
+    -webkit-text-stroke: .1rem #c23c48;
     letter-spacing: .3rem;
     -webkit-text-fill-color: transparent;
 }
@@ -827,15 +947,16 @@ nav .gnb_btn {
     width: 6rem;
     height: 6rem;
     right: -5%;
-    top: -10%;
+    top: -15%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1c1c1c;
+    background-color: #c23c48;
     transform: rotate(15deg);
     border-radius: 50%;
     font-size: .9rem;
     font-family: 'Telegraf Regular';
+    color: #000;
     cursor: pointer;
     transition: transform 1.2s;
 }
@@ -849,8 +970,8 @@ nav .gnb_btn {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    color: #000;
-    font-size: 1.25rem;
+    color: #c23c48;
+    font-size: 1.3rem;
     font-weight: 600;
     font-family: 'Telegraf Regular';
 }
