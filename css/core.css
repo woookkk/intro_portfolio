@@ -43,9 +43,12 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'RobotoSlab-Regular';
-    src: url(../fonts/RobotoSlab-Regular.ttf) format('truetype'), /*url(../font/KakaoRegular.woff) format('woff')*/;
+    src: url(../fonts/RobotoSlab-Regular.ttf) format('truetype'),
+        /*url(../font/KakaoRegular.woff) format('woff')*/
+    ;
     font-weight: normal;
     font-style: normal;
 }
@@ -96,50 +99,50 @@ body {
 }
 
 @keyframes noiseBG {
-        0% {
-            transform: translate3d(0, 9rem, 0);
-        }
-
-        10% {
-            transform: translate3d(-1rem, -4rem, 0);
-        }
-
-        20% {
-            transform: translate3d(-8rem, 2rem, 0);
-        }
-
-        30% {
-            transform: translate3d(9rem, -9rem, 0);
-        }
-
-        40% {
-            transform: translate3d(-2rem, 7rem, 0);
-        }
-
-        50% {
-            transform: translate3d(-9rem, -4rem, 0);
-        }
-
-        60% {
-            transform: translate3d(2rem, 6rem, 0);
-        }
-
-        70% {
-            transform: translate3d(7rem, -8rem, 0);
-        }
-
-        80% {
-            transform: translate3d(-9rem, 1rem, 0);
-        }
-
-        90% {
-            transform: translate3d(6rem, -5rem, 0);
-        }
-
-        100% {
-            transform: translate3d(-7rem, 0, 0);
-        }
+    0% {
+        transform: translate3d(0, 9rem, 0);
     }
+
+    10% {
+        transform: translate3d(-1rem, -4rem, 0);
+    }
+
+    20% {
+        transform: translate3d(-8rem, 2rem, 0);
+    }
+
+    30% {
+        transform: translate3d(9rem, -9rem, 0);
+    }
+
+    40% {
+        transform: translate3d(-2rem, 7rem, 0);
+    }
+
+    50% {
+        transform: translate3d(-9rem, -4rem, 0);
+    }
+
+    60% {
+        transform: translate3d(2rem, 6rem, 0);
+    }
+
+    70% {
+        transform: translate3d(7rem, -8rem, 0);
+    }
+
+    80% {
+        transform: translate3d(-9rem, 1rem, 0);
+    }
+
+    90% {
+        transform: translate3d(6rem, -5rem, 0);
+    }
+
+    100% {
+        transform: translate3d(-7rem, 0, 0);
+    }
+}
 
 }
 
@@ -182,11 +185,116 @@ td {
     outline: 2px dashed blue;
 }
 
+/* pj 비율박스 */
 .ratio_box::before {
     content: "";
     display: block;
-    padding-top: 50%;
+    padding-top: 55%;
     outline: 2px dashed red;
+}
+
+
+.pjH_view li {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.pjH_view li p {
+    display: block;
+    white-space: nowrap;
+    padding-right: 40px;
+    animation: flow_Ani 5s linear infinite;
+}
+
+.pjH_view li:nth-child(2) p {
+    animation: flow_Ani2 4s linear infinite;
+}
+
+@keyframes flow_Ani {
+    0 {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes flow_Ani2 {
+    0 {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.pjH_view li:not(:last-child) {
+    padding-bottom: 35px;
+}
+
+.pjH_view li:not(:nth-child(2)) {
+    font-weight: normal;
+    font-style: italic;
+    -webkit-text-stroke: .5px #fff;
+    -webkit-text-fill-color: transparent;
+}
+
+/* pj 호버 마퀴태그 */
+
+.pjH_view {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    overflow: hidden;
+    transition: opacity .6s ease-out;
+    opacity: 0;
+}
+
+
+/* join 비율 유지 속박스 */
+.pibx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* 속박스 내의 직계자식들*/
+.pibx > * {
+    position: relative;
+    color: #fff;
+    opacity: 0;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    transition: opacity .4s ease-out;
+    z-index: 1;
+}
+
+/* join pj 호버 커버 */
+.project_joint_listBox li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity .6s ease-out;
+}
+
+/* join pj 호버시 내용 보이기 */
+.project_joint_listBox li:hover::after ,.project_joint_listBox li:hover .pibx > *{
+    opacity: 1;
 }
 
 

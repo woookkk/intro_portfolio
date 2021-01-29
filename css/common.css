@@ -13,6 +13,7 @@ body {
 	/* Safari and  Chrome */
 	-o-animation: fadein 2000ms ease-out;
 	/* Opera */
+    transition: background-color 1s ease-out;
 }
 
 @keyframes fadein {

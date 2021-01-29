@@ -20,9 +20,12 @@ body {
 .nav_page {
     position: relative;
     height: 100vmin;
-    background-color: #efe8d7;
     overflow: hidden;
+    background-color: #efe8d7;
 }
+
+.color-cream {}
+
 
 .nav_page_area {
     position: absolute;
@@ -58,11 +61,13 @@ body {
 }
 
 /* nav */
+
+
 .gnb_btn img {
     width: 100%;
 }
 
-nav .gnb_btn {
+.gnb_btn {
     position: absolute;
     width: 10%;
     top: 15%;
@@ -172,6 +177,10 @@ nav .gnb_btn {
     background-color: #002A5A;
 }
 
+.color-blue {
+    background-color: #002A5A;
+}
+
 /* about_box */
 
 .about_box {
@@ -266,11 +275,11 @@ nav .gnb_btn {
 
 .about_info_text p {
     font-size: 1.3rem;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 .about_info_text_2 {
-    padding: 5% 0;
+    padding: 5% 0 3%;
 }
 
 .about_info_list_box {
@@ -336,13 +345,14 @@ nav .gnb_btn {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1.6;
     font-size: 1.5rem;
     font-weight: bold;
     color: #1D8883;
 }
+
 .cursor {
     position: absolute;
     width: 100%;
@@ -372,6 +382,7 @@ nav .gnb_btn {
         transform: translateY(5px);
     }
 }
+
 /*
 .skillP{
     position: absolute;
@@ -388,7 +399,11 @@ nav .gnb_btn {
 #skills_page_wrap {
     width: 100%;
     height: 100%;
-    background-color: #D2D2D2;
+    /*    background-color: #D2D2D2;*/
+}
+
+.color-grey {
+    background-color: #c1c1c1;
 }
 
 .skills_page_area {
@@ -412,9 +427,28 @@ nav .gnb_btn {
     text-shadow: 0 0 2px #000;
 }
 
+/* 터치 스크린 */
+.skills_M{
+    position: relative;
+    padding-left: 4%;
+    margin-top: 2%;
+    font-family: 'Bitter-Regular';
+    font-size: 2rem;
+    font-style: italic;
+    color: #4e4743;
+    display: none;
+}
+.skills_Mimg{
+    position: absolute;
+    top: 60px;
+    left: 105px;
+    width: 100px;
+    transform: rotate(-82deg);
+}
+
 /* 스킬 리스트 */
 .skills_list {
-    padding: 5% 0;
+    padding: 5% 0 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -549,6 +583,9 @@ nav .gnb_btn {
 #project_page_wrap {
     width: 100%;
     height: 100%;
+}
+
+.color-green {
     background-color: #235c47;
 }
 
@@ -560,7 +597,7 @@ nav .gnb_btn {
     animation: circle_svg 10s linear infinite;
 }
 
-#circle_svg embed{
+#circle_svg embed {
     width: 100%;
     display: block;
 }
@@ -616,28 +653,28 @@ nav .gnb_btn {
 }
 
 .project_title li:nth-child(2) {
-    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.9);
+    -webkit-text-stroke: 2px rgba(194, 60, 72, 0.9);
     -webkit-text-fill-color: transparent;
     opacity: .7;
     z-index: 3;
 }
 
 .project_title li:nth-child(3) {
-    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.7);
+    -webkit-text-stroke: 2px rgba(194, 60, 72, 0.7);
     -webkit-text-fill-color: transparent;
     opacity: .5;
     z-index: 2;
 }
 
 .project_title li:nth-child(4) {
-    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.6);
+    -webkit-text-stroke: 2px rgba(194, 60, 72, 0.6);
     -webkit-text-fill-color: transparent;
     opacity: .4;
     z-index: 1;
 }
 
 .project_title li:nth-child(5) {
-    -webkit-text-stroke: 1px rgba(194, 60, 72, 0.5);
+    -webkit-text-stroke: 2px rgba(194, 60, 72, 0.5);
     -webkit-text-fill-color: transparent;
     opacity: .2;
 }
@@ -654,6 +691,30 @@ nav .gnb_btn {
     background: url(../images/museum.png) no-repeat center/cover;
 }
 
+.project_first_view_box::after, .project_sec_view_box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity .6s ease-out;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+.project_first_view_box:hover::after, .
+.project_sec_view_box:hover::after{
+    opacity: 1;
+}
+
+:hover::after{
+    opacity: 1;
+}
+
+
 .project_first {
     padding: 7% 0 5%;
 }
@@ -665,7 +726,7 @@ nav .gnb_btn {
 .project_first.inbox,
 .project_sec.inbox {
     width: 1200px;
-    height: 100vh;
+    height: 110vh;
 }
 
 .project_first_view,
@@ -679,9 +740,10 @@ nav .gnb_btn {
 .project_first_view_box,
 .project_sec_view_box {
     position: relative;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
-    outline: 1px solid #000;
+    cursor: pointer;
+/*    outline: 1px solid #000;*/
 }
 
 .project_first_view_box span,
@@ -694,7 +756,7 @@ nav .gnb_btn {
 .project_first_view_box span,
 .project_sec_view_box span {
     top: -50px;
-    left: -20px;
+    left: -30px;
     font-size: 5rem;
     font-weight: bold;
     color: #eba13d;
@@ -703,7 +765,7 @@ nav .gnb_btn {
 
 .project_first_view_box h3,
 .project_sec_view_box h3 {
-    bottom: -10%;
+    bottom: -8%;
     right: -15%;
     font-size: 3.5rem;
     font-family: 'Telegraf Regular';
@@ -745,6 +807,7 @@ nav .gnb_btn {
 .project_joint_listBox {
     width: 1440px;
     max-width: 100%;
+    padding: 5% 0 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -758,32 +821,42 @@ nav .gnb_btn {
     top: -2%;
     background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 10%;
+    cursor: pointer;
     outline: 1px solid red;
 }
 
-.project_joint_list1 li:first-child{
-    
+/* 공통 프젝 배경 */
+
+.project_joint_list1 li:first-child {
+     background: url(../images/join_pj_carbon.png) no-repeat center/cover;
 }
-.project_joint_list1 li:nth-child(2){
+
+.project_joint_list1 li:nth-child(2) {
     background: url(../images/join_pj_hana.png) no-repeat center/cover;
 }
-.project_joint_list1 li:nth-child(3){
+
+.project_joint_list1 li:nth-child(3) {
     background: url(../images/join_pj_altio.png) no-repeat center/cover;
 }
-.project_joint_list2 li:first-child{
+
+.project_joint_list2 li:first-child {
     background: url(../images/join_pj_megabox.png) no-repeat center/cover;
 }
-.project_joint_list2 li:nth-child(2){
+
+.project_joint_list2 li:nth-child(2) {
     background: url(../images/join_pj_roamom.png) no-repeat center/cover;
 }
-.project_joint_list3 li:first-child{
+
+.project_joint_list3 li:first-child {
     background: url(../images/join_pj_indigo.png) no-repeat center/cover;
 }
-.project_joint_list3 li:nth-child(2){
+
+.project_joint_list3 li:nth-child(2) {
     background: url(../images/join_pj_suhang.png) no-repeat center/cover;
 }
-.project_joint_list3 li:nth-child(3){
-   background: url(../images/join_pj_san.png) no-repeat center/cover;
+
+.project_joint_list3 li:nth-child(3) {
+    background: url(../images/join_pj_san.png) no-repeat center/cover;
 }
 
 .project_joint_listBox li::before {
@@ -816,6 +889,21 @@ nav .gnb_btn {
     text-shadow: 0 0 2px #000;
 }
 
+/* 공통 프젝 호버 정보 보이기 */
+.pj_jhover h3{
+    font-size: 2.1vw;
+    padding-bottom: 30px;
+}
+.pj_jhover p{
+    font-size: 1.5vw;
+    padding-bottom: 20px;
+}
+.pj_jhover span{
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+
 
 /********* 마지막 페이지 - contact_page_wrap *********/
 
@@ -823,6 +911,9 @@ nav .gnb_btn {
     height: 100vh;
     width: 100%;
     padding: 2%;
+}
+
+.color-yellow {
     background-color: #eba13d;
 }
 
@@ -956,6 +1047,7 @@ nav .gnb_btn {
     border-radius: 50%;
     font-size: .9rem;
     font-family: 'Telegraf Regular';
+    font-weight: bold;
     color: #000;
     cursor: pointer;
     transition: transform 1.2s;

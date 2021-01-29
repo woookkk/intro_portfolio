@@ -27,6 +27,46 @@ $(function () { //////// jQB //////////////
 
     window.addEventListener('scroll', handleScroll);
 
+    /* 부드러운 배경색 전환 */
+
+    $(window).scroll(function () {
+
+        var $window = $(window),
+            $body = $('body'),
+            $bgc = $('.bgc');
+
+
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+
+        $bgc.each(function () {
+            var $this = $(this);
+
+
+            if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+
+                $body.removeClass(function (index, css) {
+                    return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+                });
+
+                $body.addClass('color-' + $(this).data('color'));
+            }
+        });
+
+    }).scroll(); //////////////////////// scroll /////////
+
+
+
+
+    /* nav 박스 버튼 */
+    $(".gnb_btn").click(function () {
+        $(".gnb_box").fadeIn(200);
+        $(this).hide();
+    }); ///////// click /////////////
+    $(".close_btn").click(function () {
+        $(".gnb_box").fadeOut(200);
+        $(".gnb_btn").show();
+    }); //////////// click ///////////////
+
 
 
 
@@ -127,25 +167,28 @@ $(function () { //////// jQB //////////////
 
 
 
+    /* 프로젝트 호버시 사이트 뷰 넣기 */
+    $(".pjhover").hover(function () {
+        $(this).find(".pjH_view").css({
+            opacity: 1
+        }).siblings().css({
+            opacity: 0
+        }); ////css ///////
+    }, function () {
+        $(".pjH_view").css({
+            opacity: 0
+        }); ////css ///////
+    }); ////////// hover //////////////
 
-    /* nav 박스 버튼 */
-    $(".gnb_btn").click(function () {
-        $(".gnb_box").fadeIn(200);
-        $(this).hide();
-    }); ///////// click /////////////
-    $(".close_btn").click(function () {
-        $(".gnb_box").fadeOut(200);
-        $(".gnb_btn").show();
-    }); //////////// click ///////////////
 
     /* 공통 프젝 페럴렉스 */
     var rellax1 = new Rellax('.rellax1', {
-        center : true ,
-        speed: -1
+        center: true,
+        speed: -3
     });
     var rellax2 = new Rellax('.rellax2', {
-        center : true ,
-        speed: 3
+        center: true,
+        speed: 1
     });
 
 
@@ -167,5 +210,12 @@ $(function () { //////// jQB //////////////
     });
 
 
+    /* 이메일 복사 */
+    
+    
+    /* 모바일 부드러운 화면전환 빼기 */
+    if ($(window).width() < 550){
+        $(".about_info ul").removeClass("up_on_scroll");
+    };
 
 }); ////////////// jQB /////////////////////////
