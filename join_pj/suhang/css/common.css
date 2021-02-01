@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+*{margin:0; padding:0; box-sizing:border-box;}
+
+a{text-decoration:none;}
+li{list-style:none;}
+input, select, textarea{border:0; outline:0;}
+
+body{font-family: 'Noto Sans KR', sans-serif;}
+body, table{line-height:1; font-size:12px;}
+
+/*공동사항(배경색상)*/
+.bg_red{background-color:#ff899d;}
+.bg_sky{background-color:#8bdfee;}
+.bg_purple{background-color:#a7a3f6;}
+.bg_yellow{background-color:#ffd83f;}
+.bg_blue{ background-color:#78b0ec;}
+.bg_pink{background-color:#ff7979;}

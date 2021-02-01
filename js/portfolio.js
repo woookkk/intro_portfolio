@@ -1,5 +1,7 @@
 $(function () { //////// jQB //////////////
 
+
+
     /* 부드러운 화면전환 */
 
     function isElementUnderBottom(elem, triggerDiff) {
@@ -166,21 +168,6 @@ $(function () { //////// jQB //////////////
     }); //////// mouseleave ////////////
 
 
-
-    /* 프로젝트 호버시 사이트 뷰 넣기 */
-    $(".pjhover").hover(function () {
-        $(this).find(".pjH_view").css({
-            opacity: 1
-        }).siblings().css({
-            opacity: 0
-        }); ////css ///////
-    }, function () {
-        $(".pjH_view").css({
-            opacity: 0
-        }); ////css ///////
-    }); ////////// hover //////////////
-
-
     /* 공통 프젝 페럴렉스 */
     var rellax1 = new Rellax('.rellax1', {
         center: true,
@@ -211,11 +198,70 @@ $(function () { //////// jQB //////////////
 
 
     /* 이메일 복사 */
-    
-    
+    new ClipboardJS('.copy_box');
+    $(".copy_box").click(function () {
+        alert("메일 주소가 복사 되었습니다 :)");
+    }); //// click ///////////
+
+
     /* 모바일 부드러운 화면전환 빼기 */
-    if ($(window).width() < 550){
-        $(".about_info ul").removeClass("up_on_scroll");
-    };
+    let mob = 0;
+    if ($(window).width() < 550) mob = 1;
+
+    if (mob) {
+        let tg = $(".about_info_text");
+        let temp = tg.html();
+        tg.remove();
+        $(".blank ul li").html(temp)
+            .addClass("about_info_text up_on_scroll")
+            .css({
+                color: "#fff"
+            });
+        $(".about_box").css({
+            height: "100vh"
+        });
+
+    } //// if /////
+
+    /* 공퉁 프젝 페럴렉스 빼기 */
+    if ($(window).width() < 415) {
+        rellax1.destroy();
+        rellax2.destroy();
+    } //// if ////
+
+
+    /* 공통 pj 페이지 이동 */
+
+    let link = [
+                "",
+                "join_pj/hana/index.html",
+                "join_pj/ator/index.html",
+                "join_pj/Megabox/index.html",
+                "join_pj/lowamom/index.html",
+                "join_pj/indigo/index.html",
+                "join_pj/suhang/00.intro.html",
+                "join_pj/sansam/samsam.html"
+            ];
+
+    $(".project_joint_listBox > ul > li").each(function (idx, ele) {
+        $(ele).click(function(){
+            //console.log(idx+"번호");
+            
+            window.open().location.href = link[idx];
+            
+            
+        });//////// click ////////////
+    }); ///////////// each ///////////////
+
+    /* 탑 버튼 */
+    
+    $("#top_btn").click(function () {
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800); /////////// animate //////////////////
+
+    }); ///////////////// click ////////////////////////////
+    
 
 }); ////////////// jQB /////////////////////////

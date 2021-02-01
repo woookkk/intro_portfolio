@@ -1,0 +1,64 @@
+/*메인랩*/
+.main_bg{background:url(../images/main_bg_mon.jpg)no-repeat fixed; background-size:cover;}
+
+.main_wrap{width:1100px; position:absolute; left:calc(50% - 550px); top:calc(50% - 375px);}
+.main_area{height:750px; background-color:#fff; border-radius:20px; overflow:hidden; background-color:#f6f6f6;}
+.sub_copyright{color:#fff; text-align:right; padding-top:15px; font-size:14px;}
+
+/*학습 화면 1페이지*/
+.main_header{position:relative; height:89px; background-color:#fff;}
+.main_header h1{position:absolute; left:50px; top:25px; width:400px;}
+
+.gnb{overflow:hidden;}
+.gnb li{float:left; padding-right:20px; vertical-align:middle;}
+.gnb img{vertical-align:middle;}
+.gnb li:last-child{padding-right:0;}
+.gnb li:first-child img{padding-right:9px; vertical-align:-4px;}
+.gnb li:nth-child(2) img{vertical-align:-5px;}
+
+
+
+.gnb img{vertical-align:middle;}
+
+.gnb a{color:#666; vertical-align:middle;}
+.header_right{position:absolute; right:50px; top:40px; overflow:hidden;}
+.header_visit{float:left; padding-right:29px; vertical-align:middle; font-size:14px;}
+.header_visit img{padding-right:10px; vertical-align:middle; }
+.header_acdemy_name{position:absolute; left:60px; top:30px; color:#666; font-size:15px;}
+.gnb li b{color:#ff695f;}
+
+.sub_wrap{padding:40px; overflow:hidden;}
+.sub_left_navi{float:left; width:171px; height:582px; border-radius:11px; padding:49px 24px 0 30px; margin-right:19px;}
+
+.sub_left_navi span{position:absolute; right:0; top:0; color:#ff0;}
+
+.sub_left_navi a{color:#fff; height:33px; display:block; font-size:15px;  position:relative;}
+.sub_left_navi a:hover{font-weight:700;}
+.sub_left_navi .active{font-weight:700;}
+
+
+.sub_area{float:right; width:830px;}
+.study_table{width:100%; height:127px; background-color:#fff; border-radius:10px; padding:0 10px;}
+.study_caption{overflow:hidden; text-overflow:ellipsis; white-space:nowrap; height:24px; max-width:260px; padding-right:10px; font-size:20px; font-weight:500;}
+.study_table h3{overflow:hidden; padding-bottom:16px; color:#333;}
+.study_table h3 *{float:left; }
+.study_label{display:inline-block; width:65px; height:23px; line-height:23px; color:#fff; font-size:14px; text-align:center; border-radius:5px; font-weight:400; font-size:13px;}
+.study_img{width:163px; height:100px; border-radius:8px; background-repeat:no-repeat; background-size:cover; background-position:center;}
+.study_btn{display:block; width:86px; height:40px; line-height:40px; text-align:center; color:#fff; font-size:15px; border-radius: 10px; margin:2px 0;}
+.study_info{color:#333; font-size:15px; font-weight:500;}
+.study_date{padding-right:18px;}
+.study_btn.before{background-color:#ff7979;}
+.study_btn.complete{background-color:#7a80b9;}
+.study_btn.report{background-color:#78b0ec;}
+
+.study_list li{margin-bottom:10px;}
+.study_table th{text-align:left;}
+
+.paging{text-align:center; padding-top:10px;}
+.paging li{display:inline-block;  width:30px; height:30px; background-color:#fff; border-radius:12px; line-height:32px; text-align:center; color:#333;}
+
+.paging a, .paging span{color:#666; font-size:15px;}
+.paging .active{color:#333; font-weight:700;}
+.paging a:hover{color:#333; font-weight:700;}
+
+

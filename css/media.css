@@ -233,7 +233,10 @@
         font-size: 1.9rem;
     }
 
-    .project_area .break_pdd, .project_area .break_Fpdd, .project_area .break_pddM, .project_area .break_Spdd {
+    .project_area .break_pdd,
+    .project_area .break_Fpdd,
+    .project_area .break_pddM,
+    .project_area .break_Spdd {
         display: block;
     }
 
@@ -517,36 +520,31 @@
     }
 
     .about_box .about_box_area {
-        top: 10%;
+        top: 4%;
+        margin: 0 auto 10%;
         transform: none;
     }
 
-    .about_info_intro .about_info_text {
-        position: absolute;
-        top: -50%;
-    }
-
-    .about_info .about_info_text {
-        padding: 5% 10% 0;
-    }
-
-
-    .about_info .about_info_text h3 {
-        padding-bottom: 10%;
+    .about_box .blank h3 {
         font-size: 1.75rem;
         text-align: center;
     }
 
-    .about_info_text .break {
-        display: block;
+    .about_box .blank p:nth-child(3) {
+        padding-bottom: 5%;
     }
+
+    .about_box .blank p {
+        padding-left: 13%;
+    }
+
 
     #about_page_wrap .about_info {
         height: 100vh;
     }
 
     .about_info .about_info_list_box {
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
     .about_info_list .about_info_list_box dd {
@@ -588,6 +586,8 @@
     }
 
     /********* 네번째 페이지 - project_page_wrap *********/
+
+    /* 헤더 부분 */
     #project_page_wrap .project_page_header {
         height: 100vh;
     }
@@ -606,6 +606,7 @@
         top: 22%;
     }
 
+    /* 첫번째 */
     .project_area .project_viewF span {
         top: -30px;
         font-size: 3.8rem;
@@ -678,6 +679,16 @@
         display: block;
     }
 
+    .project_area .pjH_view li:not(:last-child) {
+        padding-bottom: 20px;
+    }
+
+    /* 공통 프로젝트 */
+
+    .project_join_view .pj_jhover h3,
+    .project_join_view .pj_jhover p {
+        padding-bottom: 10px;
+    }
 
 
     /********* 마지막 페이지 - contact_page_wrap *********/
@@ -778,9 +789,6 @@
     }
 
     /*********  두번째 페이지 - about_page_wrap  **********/
-    .about_info .about_info_text {
-        padding: 5% 7% 0;
-    }
 
     .about_info_list .about_info_list_box dd {
         padding-left: 0;
@@ -790,8 +798,21 @@
         padding-top: 10%;
     }
 
-    .about_info_intro .about_info_text {
-        top: -57%;
+    .about_box .blank p {
+        padding-left: 0%;
+    }
+
+    .about_box .blank p br {
+        display: none;
+    }
+
+    .about_box .about_box_area {
+        top: 10%;
+        margin: 0 auto 35%;
+    }
+
+    .about_box .blank h3 {
+        padding-bottom: 5%;
     }
 
     /************** 세번째 페이지 - skills page **********/
@@ -869,15 +890,57 @@
         margin-top: 15%;
     }
 
-    /* 공통 프젝 */
-    .project_joint .project_joint_listBox ul {
-        flex-basis: 32%;
+    /* 호버 */
+    .project_area .pjH_view li:not(:last-child) {
+        padding-bottom: 15px;
+    }
+    .project_area .pjH_view li{
+        font-size: 7vW;
     }
 
-    .project_joint .project_joint_title {
+    /* 공통 프젝 */
+
+    .project_join_view .project_joint_listBox {
         position: relative;
-        padding-top: 15%;
-        z-index: 1;
+        top: -30px;
+        display: block;
+    }
+
+    .project_join_view .project_joint_listBox ul li {
+        float: left;
+        width: 45%;
+        margin-bottom: 10%;
+    }
+
+
+    .project_join_view .project_joint_list1 li:nth-child(1),
+    .project_join_view .project_joint_list1 li:nth-child(3),
+    .project_join_view .project_joint_list2 li:nth-child(2),
+    .project_join_view .project_joint_list3 li:nth-child(2) {
+        margin-right: 10%;
+    }
+
+    .project_area .project_joint.inbox {
+        height: 120vh;
+    }
+
+    .project_area .project_join_view {
+        position: relative;
+        top: 0;
+        transform: none;
+        width: 100%;
+    }
+
+    .project_join_view .pj_jhover h3 {
+        font-size: 3.5vw;
+    }
+
+    .project_join_view .pj_jhover p {
+        font-size: 3vw;
+    }
+
+    .project_join_view .pj_jhover span {
+        font-size: 2vw;
     }
 
 
@@ -941,6 +1004,10 @@
         left: -20%;
     }
 
+    .nav_page_area .first_bg li {
+        font-size: 36vw;
+    }
+
     /*********  두번째 페이지 - about_page_wrap  **********/
 
     .about_box .about_box_area {
@@ -955,16 +1022,29 @@
         width: 50%;
     }
 
-    .about_info .about_info_text {
-        padding: 5% 4% 0;
+    .about_box .about_box_area {
+        margin: 0px auto 22%;
     }
 
-    .about_info .about_info_text p br {
-        display: none;
+    .about_box .blank h3 {
+        font-size: 1.6rem;
     }
+
+    .about_box .blank p {
+        font-size: 1.25rem;
+    }
+
+    .blank .about_info_text_2 {
+        padding: 0% 0 3%;
+    }
+
 
     .about_info_list .about_education p {
         text-indent: 23%;
+    }
+
+    .about_info_list .about_info_list_box dt {
+        font-size: 1.2rem;
     }
 
     .about_info_list .about_info_list_box dd {
@@ -972,17 +1052,37 @@
         text-indent: -1rem;
     }
 
+    .about_info_list .about_info_list_box dl:not(:last-child)::before {
+        height: 1px;
+    }
+
+    .about_info .about_info_list_box {
+        padding-top: 7%;
+    }
+
+    .about_info .about_title {
+        padding-top: 0%;
+    }
+
     /************** 세번째 페이지 - skills page **********/
+
+    body #skills_page_wrap {
+        height: auto;
+    }
 
     .skills_page_area .skills_Mimg {
         width: 60px;
     }
 
-    .skills_page_area .skills_list {
-        padding-top: 6%;
+    .skills_page_area .skills_title {
+        padding-top: 0;
     }
 
     /********* 네번째 페이지 - project_page_wrap *********/
+
+    #project_page_wrap .project_page_header {
+        height: auto;
+    }
 
     .project_page_header #circle_svg {
         width: 160px;

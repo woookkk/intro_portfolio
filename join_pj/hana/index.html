@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>하나투어</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="../font/css/all.css" rel="stylesheet">
+  
+   
+</head>
+<body>
+ <!-- 상단 광고 영역 -->
+  <div id="advert_wrap">
+     <section class="advert_area">
+          <ul class="advert_list">
+              <li>
+                  <a href="#">
+                      <div class="advert_text">
+                          <p>고객님들의 안전을 위하여 최선을 다하겠습니다.</p>
+                          <div>
+                              신종 코로나 바이러스 관련 안내
+                              <span class="advert_go">GO</span>
+                          </div>
+                          
+                      </div>
+                      <div class="advert_img"><img src="images/advert_img_1.jpg"></div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <div class="advert_text">
+                          <p>휴식이 필요한 순간,</p>
+                          <div>
+                              #국내여행  #제주여행  #호캉스
+                              <span class="advert_go">GO</span>
+                          </div>
+                          
+                      </div>
+                      <div class="advert_img"><img src="images/advert_img_2.jpg"></div>
+                  </a>
+              </li>
+          </ul>
+          <a href="javascript:AdvertClose();" class="advert_close_btn"><img src="images/advert_close_btn.png" alt="닫기"></a>
+          <!--img src="images/advert_close_btn.png" alt="닫기" onclik="AdvertClose();"-->
+      </section>
+  </div>
+  
+  <!-- 퀵메뉴 -->
+  <aside class="quick_wrap">
+      <h4 class="quick_title">
+          <a href="javascript:QuickToggle();" >
+               최근본상품(<b>7</b>)
+                <img src="images/quick_open.png" alt="열기" id="quick_toggle">
+          </a>
+      </h4>
+          <div id="quick_area">
+              <ul class="quick_list">
+                  <li><a href="#" style="background-image:url(images/recommend_sample1.jpg)"></a></li>
+                  <li><a href="#" style="background-image:url(images/recommend_sample2.jpg)"></a></li>
+                  <li><a href="#" style="background-image:url(images/recommend_sample3.jpg)"></a></li>
+              </ul>
+              <!--div class="quick_none">최근본 상품이<br>없습니다.</div-->
+          </div>
+      <a href="#" class="quick_top"><span>▲</span> TOP</a>
+  </aside>
+  
+   <!-- 전체랩 -->
+   <div class="main_wrap">
+        <!-- 헤더영역 -->
+        <header>
+          
+           <div class="gnb_wrap">
+                <ul class="gnb">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            
+            <!--ul class="gnb">
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul-->
+               
+                <div class="header_area">
+                    <div class="header_search_wrap">
+                       <h1 class="header_logo"><a href="/"><img src="images/logo_header.png" alt="로고"></a></h1>
+                           <form class="header_search_area" name="header_search_area">
+                              <input type="text" class="header_search_input" placeholder="검색어를 입력하세요." value="4명만 모이면 단독여행 OK! 우리끼리 단독여행" name="header_search_input" onclick="SearchShow();" onblur="SearchHide();">
+                              <a href="#" class="header_search_btn"></a>
+                              
+                              <!-- 검색 네비게이션 -->
+                              <div id="header_search_box" onmouseleave="SearchNone();">
+                                    <div class="header_search_tab_wrap">
+                                        <ul id="header_search_tab">
+                                            <li class="active" onclick="SearchTab(0,'header_search_content_1')">최근 검색어</li>
+                                            <li onclick="SearchTab(1,'header_search_content_2')">최근 검색어</li>
+                                            <li onclick="SearchTab(2,'header_search_content_3')">추천 검색어</li>
+                                        </ul>
+                                        <div id="header_search_content">
+                                            <section id="header_search_content_1">aaaaaaaaaa</section>
+                                            <section id="header_search_content_2">bbbbbbbbbb</section>
+                                            <section id="header_search_content_3">cccccccccc</section>
+                                        </div>    
+                                    </div>
+                                  <div class="header_search_close"><a href="javascript:SearchNone();">닫기</a></div>
+                              </div>
+                           </form>
+                           
+                           <div class="header_hot_wrap" onmouseover="RankShow();">
+                               <b class="header_hot_label">HOT</b>
+                               <span id="header_hot_rank"></span>
+                               <div id="header_hot_area" onmouseout="RankHide();">
+                                   <h4><b class="header_hot_label">HOT</b>인기검색어</h4>
+                                   <ol class="header_hot_list" >
+                                       <li><a href="#">울릉도</a></li>
+                                       <li><a href="#">제주도</a></li>
+                                       <li><a href="#">가평</a></li>
+                                       <li><a href="#">속초</a></li>
+                                       <li><a href="#">부산</a></li>
+                                   </ol>
+                               </div>
+                           </div>
+                   </div>
+                    <ul class="header_my_list">
+                        <li onmouseover="MyPopupShow();" onmouseout="MyPopupHide();">
+                            <a href="#">
+                                <img src="images/header_my_icon_1.png" alt="마이메뉴">마이메뉴
+                            </a>
+
+                            <div id="header_my_popup" class="header_my_popup">
+                               <div class="header_my_box">
+                                    <img src="images/header_my_tri.png" class="header_my_tri">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/header_my_icon_2.png" alt="예약내역">에약내역
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/header_my_icon_3.png" alt="장바구니">장바구니
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lnb_wrap">
+                <div class="lnb_area">
+                    <a href="javascript:HeaderTotalShow();" id="lnb_toggle"><i class="fas fa-bars"></i>전체메뉴</a>
+                </div>
+                <!-- lnb 전체랩 박스-->
+                <div id="lnb_total_wrap">
+                    <div class="lnb_total_area">
+                        <a href="javascript:HeaderTotalHide();" class="lnb_total_close"><img src="images/advert_close_btn.png" alt="닫기"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 메인비주얼 영역 -->
+        <div id="main_visual_wrap">
+            <div class="main_visual_area">
+                <div class="main_visual_tab_wrap">
+                   <h2>고객님,<br><b>어떤 여행을 꿈꾸시나요?</b></h2>
+                    <ul id="main_visual_tab">
+                        <li><a href="javascript:MainVisualTab(0);" class="active">패키지</a></li>
+                        <li><a href="javascript:MainVisualTab(1);">항공</a></li>
+                        <li><a href="javascript:MainVisualTab(2);">호텔</a></li>
+                    </ul>
+                    <div id="main_visual_tab_area">
+                       <!-- 검색 버튼 -->
+                        <section id="main_visual_tab_1">
+                            <a href="#" class="main_visual_tab_btn">패키지 검색</a>
+                        </section>
+                        <section id="main_visual_tab_1">
+                            <a href="#" class="main_visual_tab_btn">항공권 검색</a>
+                        </section>
+                        <section id="main_visual_tab_1">
+                            <a href="#" class="main_visual_tab_btn">숙소 검색</a>
+                        </section>
+                    </div>
+                </div>
+                
+                <section id="main_visual_box" style="background-image:url(images/main_visual_1.jpg);">
+                    <ul class="main_visual_player">
+                         <li><a href="javascript:FrewVisual();"><i class="fas fa-chevron-left"></i></a></li>  
+                         <li><a href="javascript:NextVisual();"><i class="fas fa-chevron-right"></i></a></li>    
+                         <li><a href="javascript:PlayerVisual();" id="player_visual"><i class="fas fa-stop"></i></a></li> 
+                         <li></li>
+                         <span id="main_visual_count">1 / 4</span> 
+                     </ul>  
+                </section>
+            </div>
+        </div>
+        
+        <!-- 추천여행 -->
+        <div class="main_recommend_wrap">
+            <section class="main_recommend_area">
+               <h3 class="main_common_title">고객님만을 위한 추천여행</h3>
+                <ul id="main_recommend_list">
+                    <li>
+                        <a href="#">
+                           <!-- 상품이미지 변경 -->
+                            <div style="background-image:url(images/recommend_sample1.jpg);" alt="추천여행지" class="main_recommend_img"></div>
+                            <div class="main_recommend_text">
+                                <small>내륙숙박</small>
+                                   <h4>[호텔] 국내로 떠나는 여름 썸바캉스!</h4>
+                                   <big>45,662</big><span>원~</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </section>
+         </div> 
+         
+        <!-- 슬라이드 배너 -->
+          <div class="main_slide_wrap">
+              <div class="main_slide_area">
+                <div id="main_slide_box">
+                  <section>
+                      <img src="images/main_slide_1.jpg" alt="">
+                  </section>
+                  <section>
+                      <img src="images/main_slide_2.jpg" alt="">
+                  </section>
+                </div>
+                <ul id="main_slide_tab">
+                    <li><a href="javascript:SlideTAb(0);" class="active"></a></li>
+                    <li><a href="javascript:SlideTAb(1);"></a></li>
+                </ul>
+              </div>
+          </div>
+         <!-- 여행 계획 -->
+         <div class="main_plan_wrap">
+            <section class="main_plan_area">
+                <div class="main_plan_box">
+                    <h3 class="main_plan_title">슬기로운<b>여행계획</b></h3>
+                    <a href="#" class="main_plan_btn">#국내여행 지금 출발</a>
+                    <a href="#" class="main_plan_btn white">#여름휴가 미리 계획</a>
+                </div>
+                <ul id="main_plan_list">            
+                    <!--li>1</li>
+                    <li>2</li>
+                    <li>3</li-->
+                </ul>
+            </section>
+        </div>
+        <!-- 핫한여행 -->
+        <div class="main_hot_wrap">
+            <section class="main_hot_area">
+               <h3 class="main_common_title">주목! 지금 HOT한 여행지</h3>
+                <ul id="main_hot_list">
+                    <!--li>
+                        <a href="#">
+                            <div class="main_hot_img" style="background-image:url(images/hot_sample1.jpg);"></div>
+                            <div class="main_hot_text">
+                                <h4>괌</h4>
+                                <p>괌 PIC골드로 떠나는<br>온 가족 특급휴양!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="main_hot_img" style="background-image:url(images/hot_sample2.jpg);"></div>
+                            <div class="main_hot_text">
+                                <h4>강원</h4>
+                                <p>청량함으로 승부한다!<br>동해바다 즐기기 딱 좋은때</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="main_hot_recommend">
+                        <a href="#">
+                           <div class="main_hot_img" style="background-image:url(images/hot_sample3.jpg);">
+                            <span class="main_hot_label">추천</span> 
+                           </div>
+                            <div class="main_hot_text">
+                                <h4>제주</h4>
+                                <p>괌 PIC골드로 떠나는<br>온 가족 특급휴양!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="main_hot_img" style="background-image:url(images/hot_sample4.jpg);"></div>
+                            <div class="main_hot_text">
+                                <h4>울릉도/독도</h4>
+                                <p>괌 PIC골드로 떠나는<br>온 가족 특급휴양!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="main_hot_img" style="background-image:url(images/hot_sample5.jpg);"></div>
+                            <div class="main_hot_text">
+                                <h4>호주</h4>
+                                <p>괌 PIC골드로 떠나는<br>온 가족 특급휴양!</p>
+                            </div>
+                        </a>
+                    </li-->
+                </ul>
+                
+            </section>
+        </div>
+        
+        <!-- 푸터영역 -->
+        <footer>
+            <div class="footer_top_wrap">
+                <section class="footer_top_area">
+                    <div class="footer_top_notice_wrap">
+                        <h4>공지</h4>
+                        <div id="footer_top_notice"></div>
+                        <a href="#">더보기</a>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>

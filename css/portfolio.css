@@ -192,7 +192,7 @@ body {
     top: 50%;
     margin: 0 auto;
     transform: translateY(-50%);
-    outline: 1px dotted red;
+    /* outline: 1px dotted red;*/
 }
 
 .about_box_bg {
@@ -428,7 +428,7 @@ body {
 }
 
 /* 터치 스크린 */
-.skills_M{
+.skills_M {
     position: relative;
     padding-left: 4%;
     margin-top: 2%;
@@ -438,7 +438,8 @@ body {
     color: #4e4743;
     display: none;
 }
-.skills_Mimg{
+
+.skills_Mimg {
     position: absolute;
     top: 60px;
     left: 105px;
@@ -691,7 +692,24 @@ body {
     background: url(../images/museum.png) no-repeat center/cover;
 }
 
-.project_first_view_box::after, .project_sec_view_box::after {
+/* pj 호버 마퀴태그 */
+
+.pjH_view {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    overflow: hidden;
+    transition: opacity .6s ease-out;
+    opacity: 0;
+}
+
+
+.project_first_view_box::after,
+.project_sec_view_box::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -705,15 +723,12 @@ body {
 }
 
 
-.project_first_view_box:hover::after, .
-.project_sec_view_box:hover::after{
+.project_first_view_box:hover::after,
+.project_sec_view_box:hover::after,
+.project_first_view_box:hover .pjH_view,
+.project_sec_view_box:hover .pjH_view {
     opacity: 1;
 }
-
-:hover::after{
-    opacity: 1;
-}
-
 
 .project_first {
     padding: 7% 0 5%;
@@ -743,7 +758,7 @@ body {
     width: 70%;
     margin: 0 auto;
     cursor: pointer;
-/*    outline: 1px solid #000;*/
+    /*    outline: 1px solid #000;*/
 }
 
 .project_first_view_box span,
@@ -761,6 +776,7 @@ body {
     font-weight: bold;
     color: #eba13d;
     text-shadow: 0 0 2px #000;
+    z-index: 9999;
 }
 
 .project_first_view_box h3,
@@ -771,6 +787,7 @@ body {
     font-family: 'Telegraf Regular';
     color: #eba13d;
     text-shadow: 0 0 2px #000;
+    z-index: 9999;
 }
 
 .project_first_text,
@@ -828,7 +845,7 @@ body {
 /* 공통 프젝 배경 */
 
 .project_joint_list1 li:first-child {
-     background: url(../images/join_pj_carbon.png) no-repeat center/cover;
+    background: url(../images/join_pj_carbon.png) no-repeat center/cover;
 }
 
 .project_joint_list1 li:nth-child(2) {
@@ -890,16 +907,18 @@ body {
 }
 
 /* 공통 프젝 호버 정보 보이기 */
-.pj_jhover h3{
-    font-size: 2.1vw;
+.pj_jhover h3 {
+    font-size: 2.3vw;
     padding-bottom: 30px;
 }
-.pj_jhover p{
-    font-size: 1.5vw;
+
+.pj_jhover p {
+    font-size: 1.7vw;
     padding-bottom: 20px;
 }
-.pj_jhover span{
-    font-size: 1vw;
+
+.pj_jhover span {
+    font-size: 1.1vw;
     line-height: 1.5;
 }
 
@@ -1069,11 +1088,12 @@ body {
 }
 
 /* 탑 버튼 */
-#arrow_svg {
+#top_btn {
     position: absolute;
     right: 5%;
     bottom: 10%;
     width: 52px;
     height: 56px;
     transform: rotate(180deg);
+    cursor: pointer;
 }

@@ -11,7 +11,9 @@
     <script src="js/typed.min.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/rellax.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
     <script src="js/portfolio.js"></script>
+    
 </head>
 
 <body>
@@ -62,6 +64,7 @@
                     <div class="about_line"></div>
                 </div>
             </div>
+            <div class="blank"><ul><li></li></ul></div>
         </div>
         <!-- 소개 영역 -->
         <div class="about_info inbox">
@@ -71,7 +74,7 @@
             </div>
             <ul class="about_info_intro up_on_scroll">
                 <li class="about_info_text">
-                    <h3>안녕하세요. 어쩌고 저쩌고 <br> 신입 웹퍼블리셔 최우경입니다.</h3>
+                    <h3>안녕하세요. 겸손한 자세로 <br> 최고가 되려 노력하는 신입 최우경입니다.</h3>
                     <p class="about_info_text_2"><span class="break">저는 누구나 쉽게 접근할 수 있는</span><br>
                         편리하고 실용적인 웹사이트를 만들고 싶습니다.</p>
                     <p>이를 위해 적절한 시멘틱 태그를 사용해<br>
@@ -208,8 +211,8 @@
         <!-- 첫번째 프로젝트 맘터 -->
         <div class="project_area inbox">
             <div class="project_first inbox">
-                <div class="project_first_view ">
-                    <div class="project_first_view_box ratio_box project_viewF up_on_scroll pjhover">
+                <div class="project_first_view">
+                    <div class="project_first_view_box ratio_box project_viewF up_on_scroll pjhover" onclick="window.open('https://woookkk.github.io/mom-s-touch/main.html')">
                         <span>#01</span>
                         <h3>MOM'S TOUCH</h3>
                         <ul class="pjH_view">
@@ -263,7 +266,7 @@
             <!-- 두번째 프로젝트 미술관 -->
             <div class="project_sec inbox">
                 <div class="project_sec_view ">
-                    <div class="project_sec_view_box ratio_box project_viewF up_on_scroll pjhover">
+                    <div class="project_sec_view_box ratio_box project_viewF up_on_scroll pjhover" onclick="window.open('https://woookkk.github.io/museum/index.html')">
                         <span>#02</span>
                         <h3>서울시립미술관</h3>
                         <ul class="pjH_view">
@@ -326,7 +329,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="pibx ">
+                                <div class="pibx">
                                     <div class="pj_jhover">
                                         <h3>하나투어</h3>
                                         <p>Main Page</p>
@@ -376,7 +379,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="pibx ">
+                                <div class="pibx">
                                     <div class="pj_jhover">
                                         <h3>수행코디</h3>
                                         <p>Intro, Main, Sub1</p>
@@ -413,7 +416,7 @@
                     <span id="typed5"></span>
                 </div>
                 <!-- 컨텍 박스 정보 -->
-                <div class="cotact_contacts copy_box">
+                <div class="cotact_contacts copy_box" data-clipboard-text="dndnrudrud@naver.com">
                     <div class="cotact_contacts_box">
                         <dl>
                             <dt>E-mail.</dt>
@@ -427,11 +430,11 @@
                 </div>
                 <p class="contact_last">I want to work with you :&#41;</p>
             </div>
-            <a href="">
+            <div id="top_btn">
                 <svg id="arrow_svg" viewBox="0 0 52 56">
                     <path d="M 29.0622 0 H 22.364 L 22.3631 42.987 L 4.56991 25.1998 L 0 29.6536 L 25.7538 55.2049 L 51.4257 29.6531 L 46.8556 25.1991 L 29.0621 43.064 L 29.0622 0 Z" />
                 </svg>
-            </a>
+            </div>
         </div>
 
 

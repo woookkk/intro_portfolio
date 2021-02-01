@@ -1,0 +1,26 @@
+
+
+/*인트로 화면*/
+.intro_bg{background:url(../images/intro_bg.jpg) no-repeat fixed; background-size:cover;}
+.intro_black{position:fixed; left:0; right:0; top:0; bottom:0; background-color:rgba(0,0,0,0.5);}
+.intro_header{position:fixed; left:0; right:0; top:0; background-color:rgba(0,0,0,0.6);}
+
+.intro_header_wrap{width:1100px; margin:0 auto; height:100px; position:relative;}
+.intro_header_wrap h1, .intro_lnb{position:absolute;}
+.intro_header_wrap h1{left:0; top:24px;}
+.intro_lnb{overflow:hidden; right:0; top:40px;}
+.intro_lnb li{float:left;}
+.intro_lnb a{color:#fff; padding-right:44px;}
+.intro_lnb a:hover{color:#ff0;}
+.intro_lnb li:last-child a{padding-right:0;}
+/*헤더영역*/
+
+
+.intro_box{position:absolute; left:30%; top:30%; text-align:center; color:#fff; height:370px; width:860px;
+left:calc(50% - 430px); top:calc(50% - 135px);}
+.intro_box h2{font-size:76px; line-height:0.9; padding-bottom:40px;}
+.intro_box small{font-weight:300; display:block;}
+.intro_box p{font-size:18px; line-height:1.5; padding-bottom:67px;}
+
+.intro_btn{background-color:#5c6289; width:336px; height:70px; border-radius:36px; color:#fff; display:block; margin:0 auto; font-size:28px; padding-top:23px;}
+.intro_btn b{font-weight:500;}

@@ -1,0 +1,22 @@
+
+/*로그인배경*/
+.login_bg{background:url(../images/login_bg.jpg)no-repeat fixed; background-size:cover;}
+
+.login_wrap{width:1100px;  position:absolute; left:calc(50% - 550px); top:calc(50% - 240px);}
+.login_area{height:480px; background-color:#fff; border-radius:20px; overflow:hidden;}
+.login_copyright{color:#fff; text-align:right; padding-top:15px; font-size:14px;}
+
+.login_left{float:left; background:url(../images/login_left_bg.jpg)no-repeat 50%; height:480px; color:#fff; width:456px; padding:78px 0 0 40px;}
+.login_left h3{font-size:24px; padding-bottom:18px; line-height:1.3; text-transform:uppercase; font-weight:500;}
+.login_left p{font-size:14px; line-height:1.5; font-weight:400;}
+
+.login_right{float:right; width:calc(100% - 456px); padding-top:86px;}
+.login_right_box{width:384px; margin:0 auto;}
+.login_right_box h1{padding-bottom:36px; }
+.login_right_box input{width:386px; height:55px; border:2px solid #eee; border-radius:20px; margin-bottom:10px; padding-left:26px;}
+
+
+.loign_btn_wrap{position:relative; margin-top:10px;}
+.login_foget{color:#999; line-height:40px;}
+.login_btn{width:130px; height:40px; background-color:#5c6289; border-radius:20px; padding:14px 40px; color:#fff; font-size:16px; position:absolute; right:0;}
+

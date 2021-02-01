@@ -182,7 +182,7 @@ td {
     height: 100%;
     /* 1200px 보다 작아질때 화면에 맞춤 !!*/
     margin: 0 auto;
-    outline: 2px dashed blue;
+    /*outline: 2px dashed blue;*/
 }
 
 /* pj 비율박스 */
@@ -190,7 +190,7 @@ td {
     content: "";
     display: block;
     padding-top: 55%;
-    outline: 2px dashed red;
+   /* outline: 2px dashed red;*/
 }
 
 
@@ -242,20 +242,6 @@ td {
     -webkit-text-fill-color: transparent;
 }
 
-/* pj 호버 마퀴태그 */
-
-.pjH_view {
-    position: absolute;
-    top: 50%;
-    color: #fff;
-    transform: translateY(-50%);
-    width: 100%;
-    font-size: 3rem;
-    font-weight: bold;
-    overflow: hidden;
-    transition: opacity .6s ease-out;
-    opacity: 0;
-}
 
 
 /* join 비율 유지 속박스 */

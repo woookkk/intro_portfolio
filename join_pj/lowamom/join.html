@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>로와맘</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="../font/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <!--닫기 버튼 시작-->
+        <a href="#" class="popup_close_btn">
+            <img src="images/btn_close_white.png" alt="닫기">
+        </a>
+    <!--닫기 버튼 끝-->
+    <div class="popup_wrap_1">
+        <h3 class="member_title">기본정보</h3>
+        <table cellspacing="0" cellpadding="0" class="member_table">
+           <tr>
+               <th>한글성명<span class="member_star">★</span></th>
+               <td>
+                   <input type="text" name="" class="member_input">
+               </td>
+           </tr>
+           <tr>
+               <th>아이디<span class="member_star">★</span></th>
+               <td>
+                   <input type="text" name="" class="member_input id">
+                   <a href="#" class="member_btn">중복확인</a>
+               </td>
+           </tr>
+           <tr>
+               <th>비밀번호<span class="member_star">★</span></th>
+               <td>
+                   <input type="password" name="" class="member_input pw">
+                   <div class="member_pw_text">4 - 12 글자 영문, 숫자, 특수문자(!,?)만 입력이 가능합니다.</div>
+               </td>
+           </tr>
+           <tr>
+               <th>비밀번호 확인<span class="member_star">★</span></th>
+               <td>
+                   <input type="password" name="" class="member_input pw">
+               </td>
+           </tr>
+            <tr>
+               <th>이메일<span class="member_star">★</span></th>
+               <td>
+                   <input type="text" name="" class="member_input mail">
+                   @
+                   <input type="text" name="" class="member_input mail">
+                   <select class="member_select mail" name="">
+                       <option>선택하세요</option>
+                       <option>sun</option>
+                       <option>taek</option>
+                   </select>
+                   <a href="#" class="member_btn">중복확인</a>
+                   <label class="check_label member">
+                       <input type="checkbox" name="" class="check_input">
+                       <span class="check_bullet"></span>이메일 수신동의
+                   </label>
+               </td>
+           </tr>
+            <tr>
+               <th>주소<span class="member_star">★</span></th>
+               <td>
+                   <input type="text" name="" class="member_input address">
+                   <a href="#" class="member_btn">중복확인</a>
+                   <input type="text" name="" class="member_input address">
+                   <input type="text" name="" class="member_input address">
+               </td>
+           </tr>
+           <tr>
+               <th>휴대폰 <span class="member_star">★</span></th>
+               <td>
+                   <select class="member_select phone">
+                       <option>010</option>
+                       <option>011</option>
+                       <option>017</option>
+                   </select> - 
+                   <input type="text" name="" class="member_input phone"> - 
+                   <input type="text" name="" class="member_input phone">
+                   <label class="check_label member">
+                       <input type="checkbox" name="" class="check_input">
+                       <span class="check_bullet"></span>SMS 수신동의
+                   </label>
+               </td>
+           </tr>
+        </table>
+    </div>
+</body>
+</html>

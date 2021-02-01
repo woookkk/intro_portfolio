@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap');
+/* font-family: 'Tenali Ramakrishna', sans-serif; */
+
+*{margin:0; padding:0; box-sizing:border-box;}
+
+a{text-decoration:none;}
+li{list-style:none;}
+input, select, textarea{border:0; outline:none; font-family: 'Noto Sans KR', sans-serif; } /*앞으로 추가*/
+body{font-family: 'Noto Sans KR', sans-serif; color:#666;padding-top: 50px;}
+body, table{line-height:1; font-size:14px}
+
+/** 헤더 영역 **/
+header{position:fixed; left:0; right:0; top:0; background-color:rgba(255,255,255,0.9); z-index:1000;}
+.header_wrap{position:relative; height:50px; max-width: 1200px; margin: 0 auto;}
+header h1, .header_mobile, .lnb{position:absolute;}
+header a{color:#3f51b5;}
+header h1{line-height:50px; left:15px; top:0; font-size:28px; }
+.header_mobile{font-size: 24px; line-height: 50px; right: 15px; top: 0;}
+
+.lnb{top: 50px; left: 0; right: 0; background-color: #3f51b5;  margin:0; display: none;}
+.lnb a{color: #fff; display: block; height: 50px; line-height: 49px; padding-left: 20px; border-bottom: 1px solid #192a8b; }
+
+
+@media all and (min-width:1280px){
+    .header_wrap{height:80px;}
+    header h1{line-height:80px; left:0; font-size:32px;}
+    .header_mobile{display: none;}
+
+    .lnb{top: 0px; left: auto; right: 0; background:none;  margin:0; overflow: hidden; display: block;}
+    .lnb li{float: left;}
+    .lnb a{color:#3f51b5; height: 80px; line-height: 80px; padding: 0 15px; border: 0; font-size: 17px; }
+    
+}
+
+/** 메인비주얼 영역 **/
+.main_visual_wrap img{width: 100%; display: block; }
+@media all and (min-width:1280px){
+    body{padding-top: 80px;}
+}
+
+/** 메인 공통사항 **/
+.main_title{color: #2538a1; font-size: 30px; text-align: center; padding-bottom: 30px; font-weight: 400;}
+
+
+/** 메인 we wrap 영역 **/
+.main_we_wrap{padding: 0 3%;}
+.main_we_area{padding: 30px 0; border-bottom: 2px solid #eeeeee; max-width: 1200px; margin: 0 auto;}
+.main_we_text{text-align: center; line-height: 1.8;}
+
+.main_we_bottom{padding-top: 30px; text-align: center; }
+.main_we_bottom h4{color: #3f51b5; padding: 20px 0 15px 0; font-size: 16px;}
+.main_we_bottom p{color: #616161; line-height: 24px; font-size: 14px;}
+.main_we_bottom li{margin-bottom: 25px;}
+.main_we_bottom li:last-child{margin: 0;}
+
+
+@media all and (min-width:640px){
+    .main_we_bottom{overflow: hidden;}
+    .main_we_bottom li{float: left; width: 49%; margin: 0 2% 6% 0;}
+    .main_we_bottom li:nth-child(2n){margin-right: 0;}
+    .main_we_bottom li:nth-child(2) ~ li{margin-bottom: 0;}
+}
+
+@media all and (min-width:768px){
+    
+}
+
+@media all and (min-width:1024px){
+    .main_we_top{overflow: hidden;}
+    .main_title, .main_we_text{float: left; text-align: left;}
+    .main_title{padding-top: 11px; width: calc(100% - 600px);}
+    .main_we_text{border-left: 2px solid #e0e0e0; padding-left: 20px; }
+    .main_we_bottom li{width: 25%; margin: 0; padding: 0 5px;}
+    .main_we_bottom p{font-size: 13px;}
+}
+
+@media all and (min-width:1280px){
+    .main_we_area{padding: 90px 0;}
+    .main_title{width: calc(100% - 700px);}
+    .main_we_bottom p{font-size: 15px;}
+}
+
+
+/* 메인 work 영역 */
+.main_work_wrap{padding: 30px 0;}
+.main_work_area{padding: 0 3%; max-width: 1200px; margin: 0 auto;} 
+.main_work_area .main_title{float: none;} /* 위에서 float을 종속받았기 때문에 해제해줌 */
+
+.main_work_list img{width: 100%; display: block;}
+
+.main_work_list a{position: relative; display: block; overflow: hidden;}
+.main_work_list small{display: block; font-weight: 400; padding-top: -5px; font-size: 12px;}
+
+.main_work_list h4{position: absolute; color: #fff; left: 20px; top: -55px; font-size: 24px; font-weight: 500; transition: 0.3s; line-height: 1.4;}
+.main_work_list a:before{content: ''; position: absolute; left: 0; right: 0; top: 0; bottom:0; background-color: rgba(0,0,0,0); transition: 0.3s;}
+
+
+.main_work_list a:hover h4{top:25px;}
+.main_work_list a:hover:before{background-color: rgba(63,81,181,0.6);}
+
+/* 360에서 1개만 
+   480에서 2개
+   640에서 3개
+   768부터 4개*/
+
+@media all and (min-width:360px){
+    .main_work_list img{width: 100%; display: block;} 
+}
+
+@media all and (min-width:480px){
+    .main_work_list{overflow: hidden;}
+    .main_work_list li{float: left; width: 50%;}
+}
+
+@media all and (min-width:640px){
+    .main_work_list li{width: 33.33%;}
+}
+
+@media all and (min-width:768px){
+    .main_work_list li{width: 25%;}
+}
+
+
+
+@media all and (min-width:1280px){
+    .main_work_wrap{padding: 90px 0;}
+    .main_work_area{padding: 0;}
+}
+
+
+/* 구분선 */
+.main_divider{width: 20px; height: 2px; background-color: #3f51b5; margin: 0 auto; }
+
+/* blog 영역 */
+.main_blog_area{padding: 30px 3%; max-width: 1200px; margin: 0 auto;}
+.main_blog_list{text-align: center;}
+.main_blog_list li{margin-bottom: 25px;}
+.main_blog_list li:last-child{margin: 0;}
+.main_blog_list img{display: block; width: 100%; max-width: 268px; margin: 0 auto;}
+/* max-width를 주는 이유는 이미지 실제 크기가 269px 이므로 더 늘어나면 깨지기 때문에 최대 크기를 정해준 것 */
+
+.main_blog_list small{font-size: 12px; color: #9e9e9e; display: block; padding: 15px 0 10px 0;}
+.main_blog_list p{font-size: 16px; color: #424242; max-width: 268px; margin: 0 auto; line-height: 1.6;}
+
+
+@media all and (min-width:768px){
+    .main_blog_list{overflow: hidden;}
+    .main_blog_list li{float: left; width: 32%; margin:0 2% 0 0;} 
+    /*위에서 main_blog_list li{margin-bottom: 25px;}을 줬기 때문에 bottom을 0 줘야 함 */
+}
+
+@media all and (min-width:1024px){
+    .main_blog_area .main_title{width: calc(100% - 750px);}
+}
+
+@media all and (min-width:1280px){
+    .main_blog_area{padding: 90px 0;}
+    .main_blog_area .main_title{width: calc(100% - 845px);}
+    .main_blog_list{text-align: left;}
+}
+
+
+/* contact 영역 */
+.main_contact_area{max-width: 1200px; margin: 0 auto;}
+.main_contact_box{padding: 30px 3%;}
+.main_contact_box input{width: 100%; border-bottom: 1px solid #bbb; height: 30px; margin-bottom: 20px;}
+.main_contact_box textarea{width: 100%; height: 130px; border-bottom: 1px solid #bbb; margin-bottom: 20px;}
+/* textarea는 글꼴을 안먹기 때문에 맨 위에서 따로 넣어줘야 함 */
+.main_contact_btn{width: 131px; height: 39px; background-color: #3f51b5; line-height: 39px; color: #fff; display: block; text-align: center; font-size: 12px; letter-spacing: 1px; margin: 0 0 0 auto;}
+/* 버튼 오른쪽으로 보내기 위해 'margin: 0 0 0 auto;'를 넣음. auto를 넣으면 나머지를 다 여백으로 잡기 때문에 오른쪽 정렬이 됨 */
+
+.main_contact_iframe{width: 100%; height: 350px;}
+
+
+@media all and (min-width:1024px){
+    .main_contact_box{overflow: hidden;}
+    .main_contact_box .main_title{width: calc(100% - 750px);}
+    .main_contact_form{float: right; overflow: hidden; width: 750px;}
+    .main_contact_left{float: left; width: 48%;}
+    .main_contact_right{float: right; width: 48%;}
+}
+
+@media all and (min-width:1280px){
+    .main_contact_box .main_title{width: calc(100% - 845px);}
+    .main_contact_box{padding: 90px 0;}
+    .main_contact_form{width: 845px;}
+    .main_contact_iframe{height: 450px;}
+}
+
+
+
+/* 푸터 영역 */
+footer{text-align: center; color: #3f51b5; padding: 30px 0; font-weight: bold; font-size: 16px; letter-spacing: 0.4px;}
+
+
+
+
+
+
+
+

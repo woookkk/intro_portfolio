@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{margin:0; padding:0; box-sizing: border-box;}
+a{text-decoration: none;}
+li{list-style: none;}
+input, select, textarea{border:0; outline:0; font-family: 'Noto Sans KR', sans-serif;}
+body{line-height: 1; font-size:16px; font-family: 'Noto Sans KR', sans-serif;}
+
+body{padding-top:120px;}
+
+/* 헤더영역 시작 */
+header{position: fixed; left:0; top:0; right:0; font-family: 'Merriweather', serif; z-index: 10000;}
+.header_gnb_wrap{height:85px; border-bottom:1px solid #ebebeb;
+	
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#aaaaaa+0,cccccc+11,eeeeee+27,eeeeee+27,ffffff+42 */
+background: rgb(170,170,170); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(170,170,170,1) 0%, rgba(204,204,204,1) 11%, rgba(238,238,238,1) 27%, rgba(238,238,238,1) 27%, rgba(255,255,255,1) 42%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(170,170,170,1) 0%,rgba(204,204,204,1) 11%,rgba(238,238,238,1) 27%,rgba(238,238,238,1) 27%,rgba(255,255,255,1) 42%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(170,170,170,1) 0%,rgba(204,204,204,1) 11%,rgba(238,238,238,1) 27%,rgba(238,238,238,1) 27%,rgba(255,255,255,1) 42%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.header_gnb_area{display: flex; justify-content: space-between; height:84px; width:1190px; margin:0 auto; align-items: flex-end;}
+.header_logo{position: absolute; top:20px; left:calc(50% - 100px);}
+.gnb{display: flex; width:480px;;}
+.gnb > li {width:50%; height:40px; line-height:40px;}
+.gnb >li > a {display:block; text-align: center; color:#333; font-size:18px; transition:0.3s;}
+.gnb >li > .active{color:#be9f6b;}
+.gnb >li > a:hover{color:#be9f6b;}
+
+
+.gnb_sub{display: none; border-top:3px solid #987c4c; margin-top:-3px;}
+.gnb_sub li{border:1px solid #bebebe; border-top:none; height:39px; line-height:39px; background-color:#fff;}
+.gnb_sub a{display: block; padding-left:30px; color:#666; font-size:14px; transition:0.3s;}
+.gnb_sub .active {background-color:#a89067; color:#fff;}
+.gnb_sub a:hover {background-color:#a89067; color:#fff;}
+
+.header_lnb_wrap{background-color: #f8f8f8;}
+.header_lnb_area{display: flex; justify-content: space-between; width:1190px; margin:0 auto;}
+.lnb{display: flex; width:480px;}
+.lnb li{width:50%; height:35px; line-height:35px; text-align: center;}
+.lnb a{display: block; color:#666; font-size:15px; position: relative;}
+.lnb a:after{content:''; position: absolute; bottom:0; left:50%; width:0; height:2px; background-color:#666; transition: 0.3s;}
+.lnb a:hover:after{left:0; right:0; width:100%;}
+
+/* 메인 비주얼 시작 */
+
+.main_visual_wrap{position: relative;}
+.main_visual_arrow{position:absolute; left:5%; top:calc(50% - 21.5px); width:90%; display: flex; justify-content: space-between; }
+
+.main_visual_1{background:url(../images/main_visual_1.jpg) no-repeat; background-size:cover; width:100%; height:680px;}
+
+.main_visual_1{display: flex; align-items: center; padding-left:25%;}
+
+.main_visual_text{color:#fff; z-index: 100;}
+.main_visual_text p{color:#fff7c0; font-weight: 100; font-size:40px; font-family: 'Merriweather', serif;}
+.main_visual_text h2{font-size:65px; font-weight: 300; padding:20px 0 30px 0;}
+.main_visual_text a{display:block; width:190px; height:38px; line-height:36px; color:#fff; padding-left:20px; border:1px solid #fff; font-family: 'Merriweather', serif; }
+.main_visual_text a:hover {background:rgba(255,255,255,0.3);}
+.main_visual_text img{margin-left:5px; vertical-align: 4px; }
+
+
+/* 링크 영역 시작 */
+.main_link_wrap{background-color:#b39f5d; padding:50px 0; border-top:1px solid #fff; border-bottom:1px solid #fff;}
+.main_link_area{width:1190px; margin:0 auto;}
+.main_link_list{display: flex;}
+.main_link_list li{width:25%; text-align: center; border-right:1px solid rgba(0,0,0,0.38);}
+.main_link_list li:last-child{border:none;}
+
+.main_link_list a{display: block; padding:15px 0; color:#202020; line-height:1.4;}
+.main_link_list small{display:block; padding:10px 0; font-size:14px; font-family: 'Merriweather', serif; font-weight: 300;}
+.main_link_list h4{padding-bottom:15px; font-size:20px; letter-spacing:-1px;}
+
+.main_link_logo{display: block; margin:20px auto;}
+
+
+/* 유튜브 영역 시작 */
+.main_youtube_area{display: flex; flex-direction: column; justify-content: center; align-items: center; background:url(../images/bg_main_video_22.png) no-repeat; background-size:cover; width:100%; height:747px; position: relative;}
+
+.main_youtube_area h3{color:#fff; font-size:25px; font-weight: 400; font-family: 'Merriweather', serif; border-bottom:1px solid #fff; height:30px;}
+.main_youtube{width:940px; height:528.75px; position:relative; z-index: 100; margin-top:30px;}
+
+.main_youtube_arrow_wrap{width:60%; display: flex; justify-content: space-between; align-items: center; position: absolute; top:calc(50% - 22.5px);}
+
+.main_youtub_bullet{display: flex;}
+.main_youtub_bullet a{display:block; width:12px; height:12px; border:1px solid #fff; border-radius: 50%; margin-right:10px; margin-top:20px;}
+.main_youtub_bullet li:last-child a{margin-right:0;}
+.main_youtub_bullet .active{background-color:#fff;}
+
+/* 스토리 영역 */
+.main_story_wrap{background-color:#ededed;}
+.main_story_area{width:1190px; margin:0 auto; padding:50px 0;}
+.main_story_area h3{font-size:20px; font-family: 'Merriweather', serif; text-align: center; color:#333; padding-bottom:30px;}
+
+.main_story_list{display: flex;}
+.main_story_list li {width:23.5%; margin-right:2%;}
+.main_story_list li:nth-child(4n){margin-right:0;}
+.main_story_list a{display:block; border:1px solid #ccc; }
+.main_story_list p{font-size:14px; line-height:1.4em; max-height:8.4em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical;}
+
+.main_story_img{width:100%; height:240px; background-size:cover; background-repeat: no-repeat; background-position: 50%;}
+.main_story_caption{color:#333; font-size:18px; padding-bottom:20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.main_story_box{padding:30px; color:#999;}
+.main_story_date{padding-top:20px;}
+
+/* 후기 영역 시작 */
+.main_testimonials_wrap{padding:60px 0;}
+.main_testimonials_area{width:1190px; margin:0 auto; display: flex; justify-content: space-between;}
+.main_testimonials_title{width:290px; border:1px solid #ccc;}
+.main_testimonials_list{width:calc(100% - 300px); display: flex; flex-wrap: wrap; }
+.main_testimonials_list li{width:32%; margin:0 2% 2% 0;}
+.main_testimonials_list li:nth-child(3n) {margin-right:0;}
+.main_testimonials_list li:nth-child(5n) {margin:0;}
+.main_testimonials_list li:nth-child(4) {width:66%; margin-bottom:0;}
+.main_testimonials_list a{display: block; width:100%; height:260px; background-position: 50%; background-size:cover; background-repeat: no-repeat; position: relative;}
+.main_testimonials_list a:after{content:''; position: absolute; left:0; right:0; bottom:0; top:0; transition: 0.3s;}
+.main_testimonials_list a:hover:after{background-color:rgba(0,0,0,0.5);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

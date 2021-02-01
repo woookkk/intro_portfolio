@@ -1,0 +1,85 @@
+/*메인랩*/
+.main_bg{background:url(../images/main_bg_mon.jpg)no-repeat fixed; background-size:cover;}
+
+.main_wrap{width:1100px; position:absolute; left:calc(50% - 550px); top:calc(50% - 375px);}
+.main_area{height:750px; background-color:#fff; border-radius:20px; overflow:hidden; background-color:#f6f6f6;}
+.sub_copyright{color:#fff; text-align:right; padding-top:15px; font-size:14px;}
+
+/*학습 화면 1페이지*/
+.main_header{position:relative; height:89px; background-color:#fff;}
+.main_header h1{position:absolute; left:50px; top:25px; width:400px;}
+
+.gnb{overflow:hidden;}
+.gnb li{float:left; padding-right:20px; vertical-align:middle;}
+.gnb img{vertical-align:middle;}
+.gnb li:last-child{padding-right:0;}
+.gnb li:first-child img{padding-right:9px; vertical-align:-4px;}
+.gnb li:nth-child(2) img{vertical-align:-5px;}
+
+
+
+.gnb img{vertical-align:middle;}
+
+.gnb a{color:#666; vertical-align:middle;}
+.header_right{position:absolute; right:50px; top:40px; overflow:hidden;}
+.header_visit{float:left; padding-right:29px; vertical-align:middle; font-size:14px;}
+.header_visit img{padding-right:10px; vertical-align:middle; }
+.header_acdemy_name{position:absolute; left:60px; top:30px; color:#666; font-size:15px;}
+.gnb li b{color:#ff695f;}
+
+
+
+
+
+
+/*메일리스트*/
+.sub_left_navi.mail{padding:49px 24px 0 18px; }
+.sub_wrap{padding:40px; overflow:hidden;}
+.sub_left_navi{float:left; width:171px; height:582px; border-radius:11px; padding:49px 24px 0 30px; margin-right:19px;}
+.sub_left_navi li{vertical-align:middle;}
+.sub_left_navi img{vertical-align:middle; padding-right:10px;}
+
+.sub_left_navi span{position:absolute; right:0; top:0; color:#ff0;}
+
+.sub_left_navi a{color:#fff; height:33px; display:block; font-size:15px;  position:relative;}
+.sub_left_navi a:hover{font-weight:700;}
+.sub_left_navi .active{font-weight:700;}
+
+
+
+
+
+
+.mail_unreply_status{background-color:#ff7979; display:block; width:116px; height:37px; line-height:37px; text-align:center; color:#fff; font-size:15px; border-radius:4px; margin:5px auto 0 auto; font-weight:normal;}
+.mail_reply_status{background-color:#7a80b9; display:block; width:116px; height:37px; line-height:37px; text-align:center; color:#fff; font-size:15px; border-radius:4px; margin:5px auto 0 auto;}
+
+
+.mail_list li{margin-bottom:10px; background-color:#fff; border-radius:10px; height:47px; overflow:hidden; line-height:47px; text-align:center; font-size:15px; color:#666;}
+.mail_list_title{color:#999; }
+.mail_list_title h4{font-weight:normal;font-size:15px;float:left;}
+.study_table th{text-align:left;}
+
+.mail_list_title h4:nth-child(1), .mail_list div:nth-child(1){width:7%;}
+.mail_list_title h4:nth-child(2), .mail_list div:nth-child(2){width:14%;}
+.mail_list_title h4:nth-child(3), .mail_list div:nth-child(3){width:42%;}
+.mail_list_title h4:nth-child(4), .mail_list div:nth-child(4){width:17%;}
+.mail_list_title h4:nth-child(5), .mail_list div:nth-child(5){width:20%;}
+
+.mail_list div{float:left;}
+.mail_list_caption{text-align:left; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.mail_list_caption a{color:#666;}
+.mail_list_icon{vertical-align:-3px;}
+.mail_list .active{font-weight:600; color:#333;}
+.mail_list .active a{color:#333;}
+
+
+.paging{text-align:center; padding-top:10px;}
+.paging li{display:inline-block;  width:30px; height:30px; background-color:#fff; border-radius:12px; line-height:30px; text-align:center; color:#333;}
+.paging a, .paging span{color:#666; font-size:15px; display:block;}
+.paging .active{color:#333; font-weight:700;}
+.paging a:hover{color:#333; font-weight:700;}
+
+
+
+
+

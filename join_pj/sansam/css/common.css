@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+*{margin:0; padding:0; box-sizing:border-box;}
+
+a{text-decoration:none;}
+li{list-style:none;}
+
+body{font-family: 'Noto Sans KR', sans-serif; min-width:500;}
+body, table{line-height:1; font-size:12px;}
+input, select, textarea{border:0; outline:none;}
+/*헤더영역*/
+
+.header_sns{overflow:hidden; position:absolute; left:0; top:86px;}
+.header_sns a{display:block; width:30px; height:30px; border-radius:50%; line-height:30px; background-color:#be1521; text-align:center; color:#fff; font-size:15px;}
+.header_sns li{float:left; padding-right:5px;}
+header{border-top:2px solid #be1521;  border-bottom:1px solid #eaeaea;}
+.header_wrap{position:relative; height:157px; width:1200px; margin:0 auto; }
+
+.header_wrap img{position:absolute; left:514px; top:30px;}
+.gnb{position:absolute; right:0; top:15px; overflow:hidden;}
+.gnb li{float:left; position:relative;}
+.gnb a{color:#8e8e8e; font-size:11px; padding:0 11px;}
+.gnb li:after{content:''; position:absolute; right:0; top:2px; bottom:2px; width:1px; background-color:#8e8e8e; }
+.gnb li:last-child:after{display:none;}
+.gnb li:last-child a{padding-right:0;}
+
+.header_search{position:absolute; right:0; bottom:30px; width:206px; height:39px; margin-right:0; }
+.header_search input{width:100%; height:39px; background-color:#f5f5f5; border-radius:10px; padding:0 0 0 7px; padding-right:40px;}
+.header_search a{position:absolute; right:16px; top:12px; bottom:12px; color:#9a9a9a; font-size:14px; }
+
+nav{border-top:1px solid #eaeaea;}
+.lnb_wrap{width:1200px; height:47px; margin:0 auto; position:relative; margin-top:-1px;}
+.lnb{overflow:hidden; margin:0 auto; line-height:47px; padding-left:160px;}
+.lnb_bar{position:absolute; width:47px; height:47px; background-color:#333; text-align:center;}
+.fa-bars{color:#fff; font-size:15px; padding:14px;}
+.lnb li{float:left; font-size:16px; width:16.66%; text-align:center;}
+.lnb a{color:#333; display:block;}
+.lnb a:hover{color:#be1521;}
+.lnb a.active{color:#be1521;}
+
+/*푸터영역*/
+.footer_top{border-bottom:1px solid #e8e8e8; overflow:hidden; width:1200px; margin:0 auto;}
+.footer_top{overflow:hidden; line-height:44px;}
+.footer_navi{float:left; overflow:hidden;}
+.footer_top li,.footer_sns li{float:left; }
+.footer_top a{font-size:14px; color:#4d4d4d; padding-right:35px;}
+.footer_sns{float:right; right:5px; top:0; overflow:hidden; }
+.footer_sns a{color:#333; font-size:17px; padding-right:16px;}
+.footer_sns li:last-child a{padding-right:0;}
+
+
+.footer_middle_wrap{border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; padding:25px 0 25px 0;}
+.mid_area{width:1200px; margin:0 auto;}
+.footer_title{text-transform:uppercase; padding:8px 0 20px 0; color:#333; font-size:14px; }
+.footer_cs > .footer_title:first-child{padding-left:0;}
+.mid_area{overflow:hidden; width:1200px; margin:0 auto; height:172px;}
+.mid_area > section{float:left; border-right:1px solid #e8e8e8; height:122px;}
+.footer_cs b{display:block; font-size:24px; color:#333; padding-bottom:20px;}
+section.footer_cs{width:198px; color:#939393; font-size:13px;}
+.footer_cs{line-height:1.3;}
+
+.footer_bank{width:256px; padding-left:25px; line-height:1.2; color:#939393;}
+.footer_bank big{text-transform:uppercase; font-size:18px; color:#333;  display:block; padding-bottom:20px;}
+
+
+
+.footer_notice{width:313px; padding:0 25px;} 
+.footer_notice_list li{overflow:hidden;}
+.footer_notice_text,.footer_date{float:left;}
+.footer_notice_text{width:180px; color:#939393; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding-bottom:5px;}
+.footer_notice_text:hover{text-decoration:underline;}
+.footer_date{width:calc(100% - 180px); text-align:right; color:#aaa;}
+
+/*100%-190px*/
+.footer_return{width:433px; padding-left:25px;}
+.footer_return p{color:#939393; font-size:12px;}
+address{font-style:normal; font-weight:700; color:#333; font-size:18px; padding-bottom:9px;}
+.footer_return b{color:#626262; font-size:13px;}
+
+.footer_bottom{width:1200px; margin:0 auto; font-size:14px; color:#939393; padding:32px 0 42px 0; line-height:1.4;}
+.footer_bottom a{color:#626262;}
+.footer_bottom .space{padding-right:13px;}
+
