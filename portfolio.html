@@ -13,7 +13,7 @@
     <script src="js/rellax.min.js"></script>
     <script src="js/clipboard.min.js"></script>
     <script src="js/portfolio.js"></script>
-    
+
 </head>
 
 <body>
@@ -34,14 +34,16 @@
             <nav>
                 <a href="#" class="gnb_btn"><img src="images/nav_logo.png" alt="gnb 버튼"></a>
                 <!-- gnb 박스 영역 -->
-                <div class="gnb_box">
-                    <a href="#" class="close_btn"><img src="images/close.png" alt="닫기버튼"></a>
-                    <ul class="gnb_list">
-                        <li><a href="#about_page_wrap" class="underline">About me</a></li>
-                        <li><a href="#skills_page_wrap" class="underline">Skils</a></li>
-                        <li><a href="#project_page_wrap" class="underline">Project</a></li>
-                        <li><a href="#contact_page_wrap" class="underline">Contact</a></li>
-                    </ul>
+                <div class="nav_wrap">
+                    <div class="gnb_box">
+                        <a href="#" class="close_btn"><img src="images/close.png" alt="닫기버튼"></a>
+                        <ul class="gnb_list">
+                            <li><a href="#about_page_wrap" class="underline">About me</a></li>
+                            <li><a href="#skills_page_wrap" class="underline">Skils</a></li>
+                            <li><a href="#project_page_wrap" class="underline">Project</a></li>
+                            <li><a href="#contact_page_wrap" class="underline">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -64,7 +66,11 @@
                     <div class="about_line"></div>
                 </div>
             </div>
-            <div class="blank"><ul><li></li></ul></div>
+            <div class="blank">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
         </div>
         <!-- 소개 영역 -->
         <div class="about_info inbox">
@@ -361,7 +367,7 @@
                             <li>
                                 <div class="pibx ">
                                     <div class="pj_jhover">
-                                        <h3>로아맘</h3>
+                                        <h3>로와맘</h3>
                                         <p>Main, Sub1, Sub2</p>
                                         <span>HTML / CSS / Mobile Only</span>
                                     </div>
@@ -416,7 +422,10 @@
                     <span id="typed5"></span>
                 </div>
                 <!-- 컨텍 박스 정보 -->
-                <div class="cotact_contacts copy_box" data-clipboard-text="dndnrudrud@naver.com">
+                <div class="cotact_contacts">
+                    <div class="copy_box" data-clipboard-text="dndnrudrud@naver.com">
+                        GET IN<br>TOUCH
+                    </div>
                     <div class="cotact_contacts_box">
                         <dl>
                             <dt>E-mail.</dt>

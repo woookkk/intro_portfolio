@@ -60,16 +60,43 @@ $(function () { //////// jQB //////////////
 
 
     /* nav 박스 버튼 */
-    $(".gnb_btn").click(function () {
-        $(".gnb_box").fadeIn(200);
-        $(this).hide();
-    }); ///////// click /////////////
-    $(".close_btn").click(function () {
-        $(".gnb_box").fadeOut(200);
-        $(".gnb_btn").show();
-    }); //////////// click ///////////////
+    //        $(".gnb_btn").click(function () {
+    //            $(".gnb_box").fadeIn(200);
+    //            $(this).hide();
+    //        }); ///////// click /////////////
+    //        $(".close_btn").click(function () {
+    //            $(".gnb_box").fadeOut(200);
+    //            $(".gnb_btn").show();
+    //        }); //////////// click ///////////////
 
+    
+        $(".gnb_btn").click(function () {
+            $(".nav_wrap").fadeIn(500, function () {
+                $(".gnb_box").animate({
+                    width: "45vw"
+                }, 400, "easeInExpo", function () {
+                    $(".gnb_list li").each(function (idx, ele) {
+                        $(ele).delay(200 * idx).fadeIn(500);
 
+                    }); ////// each //////////
+
+                }); /// animate ///////
+            }); //////////// fadeIn ////////
+            $(this).hide();
+        }); /////// click /////////
+   
+        $(".close_btn").click(function () {
+            $(".gnb_list li").each(function (idx, ele) {
+                $(ele).delay(200 * idx).fadeTo(400, 0);
+            }); ////// each //////////
+            $(".gnb_box").delay(1500).animate({
+                width: "0"
+            }, 400, "easeInExpo", function () {
+                $(".nav_wrap").fadeOut(500);
+            }); //////// animate /////////
+            $(".gnb_btn").show();
+        }); /////////// click ////////
+        
 
 
     /* 스킬 마우스 커서 */
@@ -115,7 +142,7 @@ $(function () { //////// jQB //////////////
                 iclass = "90%";
                 break;
             case 9:
-                iclass = "80%";
+                iclass = "85%";
                 break;
             case 11:
                 iclass = "80%";
@@ -204,7 +231,7 @@ $(function () { //////// jQB //////////////
     }); //// click ///////////
 
 
-    /* 모바일 부드러운 화면전환 빼기 */
+    /* 모바일 부드러운 화면전환 - 위치 바꾸기  */
     let mob = 0;
     if ($(window).width() < 550) mob = 1;
 
@@ -244,17 +271,18 @@ $(function () { //////// jQB //////////////
             ];
 
     $(".project_joint_listBox > ul > li").each(function (idx, ele) {
-        $(ele).click(function(){
+        $(ele).click(function () {
             //console.log(idx+"번호");
-            
+
             window.open().location.href = link[idx];
-            
-            
-        });//////// click ////////////
+
+
+        }); //////// click ////////////
     }); ///////////// each ///////////////
 
+
     /* 탑 버튼 */
-    
+
     $("#top_btn").click(function () {
 
         $('html, body').animate({
@@ -262,6 +290,6 @@ $(function () { //////// jQB //////////////
         }, 800); /////////// animate //////////////////
 
     }); ///////////////// click ////////////////////////////
-    
+
 
 }); ////////////// jQB /////////////////////////

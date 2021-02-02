@@ -2,7 +2,7 @@
 
     /************** 첫 페이지 - nav_page **************/
     nav .gnb_box {
-        width: 50vw;
+/*        width: 50vw;*/
     }
 
     /*********  두번째 페이지 - about_page_wrap  **********/
@@ -93,7 +93,7 @@
     }
 
     nav .gnb_box {
-        width: 55vw;
+/*        width: 55vw;*/
         height: 110%;
     }
 
@@ -763,7 +763,7 @@
     }
 
     nav .gnb_box {
-        width: 90vw;
+/*        width: 90vw;*/
         height: 60%;
         top: 50%;
         transform: translate(-50%, -50%) rotate(20deg);
