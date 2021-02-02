@@ -60,23 +60,42 @@ $(function () { //////// jQB //////////////
 
 
     /* nav 박스 버튼 */
-    //        $(".gnb_btn").click(function () {
-    //            $(".gnb_box").fadeIn(200);
-    //            $(this).hide();
-    //        }); ///////// click /////////////
-    //        $(".close_btn").click(function () {
-    //            $(".gnb_box").fadeOut(200);
-    //            $(".gnb_btn").show();
-    //        }); //////////// click ///////////////
+    $(".gnb_btn").click(function () {
+        $(".gnb_box").fadeIn(400, function () {
+            $(this).animate({
+                width: "50vW"
+            }, 400, "easeInExpo", function () {
+                $(".gnb_list li, .close_btn").each(function (idx, ele) {
+                    $(ele).delay(200 * idx).fadeTo(400, 1);
 
-    
+                }); ////// each //////////
+
+            }); /// animate ///////
+        }); //////////// fadeIn ////////
+        $(this).hide();
+    }); /////// click /////////
+
+    $(".close_btn").click(function () {
+        $(".gnb_list li, .close_btn").each(function (idx, ele) {
+            $(ele).delay(200 * idx).fadeTo(400, 0);
+        }); ////// each //////////
+        $(".gnb_box").delay(1000).animate({
+            width: "0"
+        }, 400, "easeInExpo", function () {
+            $(".gnb_box").fadeOut(400);
+        }); //////// animate /////////
+        $(".gnb_btn").show();
+    }); /////////// click ////////
+
+    /* 모바일 */
+    if ($(window).width() < 550) {
         $(".gnb_btn").click(function () {
-            $(".nav_wrap").fadeIn(500, function () {
-                $(".gnb_box").animate({
-                    width: "45vw"
+            $(".gnb_box").fadeIn(400, function () {
+                $(this).animate({
+                    width: "90vW"
                 }, 400, "easeInExpo", function () {
-                    $(".gnb_list li").each(function (idx, ele) {
-                        $(ele).delay(200 * idx).fadeIn(500);
+                    $(".gnb_list li, .close_btn").each(function (idx, ele) {
+                        $(ele).delay(200 * idx).fadeTo(400, 1);
 
                     }); ////// each //////////
 
@@ -84,20 +103,8 @@ $(function () { //////// jQB //////////////
             }); //////////// fadeIn ////////
             $(this).hide();
         }); /////// click /////////
-   
-        $(".close_btn").click(function () {
-            $(".gnb_list li").each(function (idx, ele) {
-                $(ele).delay(200 * idx).fadeTo(400, 0);
-            }); ////// each //////////
-            $(".gnb_box").delay(1500).animate({
-                width: "0"
-            }, 400, "easeInExpo", function () {
-                $(".nav_wrap").fadeOut(500);
-            }); //////// animate /////////
-            $(".gnb_btn").show();
-        }); /////////// click ////////
-        
 
+    } ///////// mob if /////////
 
     /* 스킬 마우스 커서 */
 

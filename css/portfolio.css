@@ -91,22 +91,11 @@ body {
 }
 
 
-.nav_wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 9999;
-    display: none;
-}
-
-
 
 /* gnb 박스 영역 */
 
 .gnb_box {
-    position: absolute;
+    position: fixed;
     /*    width: 45vw;*/
     width: 0;
     height: 100%;
@@ -114,7 +103,7 @@ body {
     left: 50%;
     transform: translateX(-50%) rotate(20deg);
     background-color: rgba(213, 120, 86, 0.98);
-    /*    display: none;*/
+    display: none;
 }
 
 .gnb_list {
@@ -150,6 +139,7 @@ body {
     transform: rotate(-18deg);
     transition: 1.0s ease all;
     cursor: pointer;
+    display: none;
 }
 
 .close_btn:hover {
