@@ -1,0 +1,656 @@
+@charset "utf-8";
+/* 카본뷰티 메인 CSS - main.css */
+
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+body {
+    padding-top: 240px;
+    /* 상단공간밀기 */
+}
+
+
+/*1. 상단영역(header.top/100%*82)*/
+#top {
+    /* 상단영역 최상위박스 고정하기 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*    background-color: rgba(247, 127, 127, 0.74);*/
+    z-index: 9999;
+    /* 가장위에 !! */
+}
+
+/* 상단영역 inbox */
+#top .inbox {
+    position: relative;
+    /* 부모자격 */
+    width: 95%;
+    /* %확장*/
+}
+
+.top {
+    /* 속박스 개별높이값 */
+    height: 82px;
+}
+
+/* 1-1. 중앙로고 */
+#logo {
+    position: relative;
+    top: 11px;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+/* 1-2. 햄버거, 검색버튼 박스 */
+.btnGrp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*    background-color: #6a85f5;*/
+}
+
+/* 햄버거 버튼박스 */
+.btnGrp li:first-child {
+    width: 86px;
+    height: 82px;
+}
+
+/* 햄버거버튼 */
+.ham {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* 세로 중앙 이동 */
+    width: 20px;
+    height: 17px;
+    overflow: hidden;
+    margin: 0 auto;
+    /* 블록박스가로중앙-마영오 */
+    outline: 2px solid red;
+}
+
+/* 햄버거 막대공통 */
+.ham span {
+    position: relative;
+    display: block;
+    /*relative 해주면 안나오니 블록으로 만들어줘야함*/
+    width: 20px;
+    left: 0;
+    height: 3px;
+    background-color: #000;
+
+    /* 트랜지션 */
+    transition: left .4s ease-in-out;
+}
+
+/*햄버거버튼에 마우스 오버시 위치이동 애니 */
+.ham:hover span {
+    left: 30px;
+}
+
+
+/* 가상요소로 햄버거 막대 만들기*/
+.ham span::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin-left: -30px;
+    background-color: #000;
+}
+
+/* 마지막 span가상요소만 width 변경하기 */
+.ham span:last-child::before {
+    width: 10px;
+}
+
+/* 개별막대 셋팅*/
+.ham span:nth-child(1) {}
+
+.ham span:nth-child(2) {
+    margin-top: 4px;
+}
+
+/*3번 막대*/
+.ham span:nth-child(3) {
+    margin-top: 4px;
+    width: 10px;
+
+    /* 트랜지션 지연시간주기*/
+    transition-delay: .2s;
+}
+
+
+
+/* 검색버튼박스 */
+.btnGrp li:last-child {
+    width: 48px;
+    height: 82px;
+}
+
+/* 검색버튼 돋보기박스 */
+.magni {
+    /*포지션 이동말고 줄간격으로 세로 중앙오게하기- svg가 inline이므로 적용됨! */
+    line-height: 82px;
+    /*position: relative;
+    top: 50%;    
+    transform: translateY(-50%);*/
+    /*세로방향 중앙이동*/
+    width: 19px;
+    height: 17px;
+    margin: 0 auto;
+    /* 마영오-가로중앙 */
+}
+
+/*1-3. 장바구니, 문구 박스*/
+.rsGrp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*background-color: #f7a623;*/
+}
+
+/* 문구 박스 */
+.rsGrp li:first-child {
+    width: 300px;
+    height: 82px;
+    font-size: 0.7rem;
+    line-height: 82px;
+}
+
+/* 앞문구 */
+.reGrp li:first-child strong {
+    text-transform: uppercase;
+    /*전체대문자변환*/
+    letter-spacing: 3px;
+    /*자간변경*/
+}
+
+/* 장바구니 박스 */
+.rsGrp li:last-child {
+    width: 90px;
+    height: 82px;
+}
+
+/* 장바구니 아이콘박스 */
+.cart {
+    width: 15px;
+    height: 19px;
+    line-height: 82px;
+    margin-left: 30px;
+}
+
+/* 1.5 무빙레터1 */
+.mtit1{
+    position: fixed;
+    top: 100px;
+    left: 30%;
+    font-size: 170px;
+    font-weight: bold;
+    transition: left .8s ease-out;
+}
+/* 2.5 무빙레터2 */
+.mtit2{
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    font-size: 170px;
+    font-weight: bold;
+    transition: left .6s ease-out;
+}
+/* 무빙레터li */
+.mtit1 li, .mtit2 li{
+    padding: 0 5px;
+ }
+
+/*2. 배너영역(section.ban/1200*500)*/
+#ban .inbox {
+    margin: 0;
+    /* 가운데오기 해제 */
+    width: 80%;
+}
+
+.ban {
+    position: relative;
+    /* 부모자격 */
+}
+
+/* 메인배너 이미지*/
+.ban img {
+    width: 100%;
+    /*height값은 자동*/
+}
+
+/* 배너 버튼 */
+.banbtn {
+    position: absolute;
+    top: 30%;
+    left: 13%;
+    /* 부모는?*/
+    width: 28%;
+    height: 90px;
+    background-color: #fff;
+    text-align: left;
+    padding-left: 15px;
+    border: 0;
+}
+
+/* 마우스 오버시 가상요소 배경검정 - 공통*/
+.cmbtn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    transition: width .4s ease-in-out;
+}
+
+/* 마우스 오버시 JS로 클래스 주기
+배경 가상요소 width 채우기 */
+.cmbtn.on::before {
+    left: 0;
+    width: 100%;
+}
+
+/* 마우스 아웃시 JS로 클래스 주기
+배경 가상요소 width 채우기 */
+.cmbtn.off::before {
+    right: 0;
+    width: 0%;
+}
+
+/* 마우스 오버시 글자색 흰색*/
+.cmbtn.on > * {
+    color: #fff;
+}
+
+.cmbtn > * {
+    position: relative;
+    /* 가상요소가 absolute이무로 다른 static요소들은 아래에 깔림
+    그래서 겹칠 수 있는 포지션중 그자리에 가만있는 relative를 주면 
+    나중에 왔으므로 위에 위치 할 수 있다!*/
+}
+
+/* 큰글자 */
+.banbtn strong {
+    font-size: 24px;
+}
+
+/* 윗첨자 */
+.banbtn sup {
+    font-size: 12px;
+}
+
+/* 아래글자 */
+.banbtn span {
+    display: block;
+    font-size: 10px;
+}
+
+/* 화살표 */
+.banbtn b {
+    float: right;
+    margin-top: -30px;
+    margin-right: 10px;
+}
+
+/*3. 상품리스트영역(section.glist/1200*2000)*/
+.glist {
+    /*    height: 2000px;*/
+    /* 높이값을 주지 않고 auto인 상태로 셋팅함 
+    - 자동으로 늘어나야함! */
+}
+
+/* 상품박스 */
+.gbx {
+    width: 1440px;
+    max-width: 100%;
+    /* 가로크기보다 작아질때 화면에 %적용*/
+    display: flex;
+    /* 자식 요소를 옆으로 흐르게 flex 적용함 */
+    justify-content: space-around;
+}
+
+/* 상품박스 트랙 ul */
+.gbx ul {
+    /*    flex: 1;*/
+    flex-basis: 30%;
+    /* width 사이즈를 준것과 동일함
+    특정 사이즈를 줘야 justify-content가 적용됨 !*/
+
+}
+
+/* 상품박스 개별 리스트 li*/
+.gbx li {
+    position: relative;
+    /* 부모자격 */
+    float: none;
+    /* float:left해제 */
+    background: #f4f2f4 url(../images/WEBSITE_Amethyst_0a723836-14e8-417f-bf05-0c63801267ce_400x560.jpg) no-repeat center/100%;
+    margin: 10% 0;
+    /* 위아래 마진만 줌 (양쪽간격은 justify-content가 줌)*/
+    outline: 2px dotted red;
+}
+
+/* li에 비율박스 적용하기 */
+.gbx li::before {
+    content: "";
+    display: block;
+    padding-top: 150%;
+}
+
+/* 비율 유지 속박스 */
+.ibx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+}
+
+/* 속박스 내의 직계자식들*/
+.ibx > * {
+    position: relative;
+    color: #fff;
+    opacity: 0;
+    transition: opacity .4s ease-out;
+    z-index: 1;
+    ;
+}
+
+/* 마우스 오버시 속박스의 직계자식들 보이기 */
+.gbx li:hover .ibx > * {
+    opacity: 1;
+}
+
+/* 마우스 오버시 상품명 올라오기*/
+.gbx li:hover .gname span b {
+    top: -2px;
+    /* 트랜지션 :속시이지 */
+    transition: top .3s ease-out .4s;
+    /* 0.4초 후 등장함 */
+}
+
+/* 마우스 오버시 상품명 아랫줄 가상요소 보이기 -1번 !!!*/
+/*.gbx li:hover .gname span::after{
+    left: 0;
+    width: 100%;
+}*/
+
+
+/* 마우스 오버시 상품명 아랫줄 가상요소 보이기 - 2번 !!*/
+/* 양쪽으로 width 채우기  !*/
+
+/* 왼쪽 바 */
+.gbx li:hover .gname span::after {
+    left: auto;
+    /* 처음 기준값 해제 !!*/
+    right: 50%;
+    /* 중앙을 기준함! 왼쪽 방향 */
+    width: 50%;
+}
+
+/* 오른쪽 바 */
+.gbx li:hover .gname span::before {
+    right: auto;
+    /* 처음 기준값 해제 !!*/
+    left: 50%;
+    /*중앙을 기준함! 오른쪽 방향 */
+    width: 50%;
+}
+
+/* 상품 분류 */
+.gcat {
+    font-size: 12px;
+}
+
+/* 상품명 */
+.gname {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    overflow: hidden;
+    /* 넘 숨 */
+}
+
+/* 상품명글자 숨기기 */
+.gname span {
+    position: relative;
+    /* 부모자격 */
+
+}
+
+.gname span b {
+    position: relative;
+    top: 25px;
+    /* 트랜지션 :속시이지 */
+    transition: top .4s ease-out;
+    /* 사라질땐 바로 사라져! 오버시와 복귀할 경우 트랜지션을 각각 잡아준다 ! */
+}
+
+/* 상품명 박스의 가상요소로 아랫줄 만들기 - 1번 !!!*/
+/*
+.gname span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;  변경포인트: 위치중간 
+    width: 0;  변경포인트: 가로크기없음
+    height: 2px;
+    background-color: #fff;
+     트랜지션 :속시이지 
+    transition: all .3s ease-out ;
+}
+*/
+
+/* 상품명 박스의 가상요소로 아랫줄 만들기 - 2번 !!!*/
+/* 두개로 나워서 만들자 ! 왜? 양쪽으로 사라져야 하니까 !*/
+
+/* 왼쪽 절반 */
+.gname span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 기준변경: 왼쪽끝 */
+    width: 0%;
+    /* 변경포인트: 가로크기없음*/
+    height: 2px;
+    background-color: #fff;
+    /* 트랜지션 :속시이지 */
+    transition: width .3s ease-out;
+}
+
+/* 오른쪽 절반 */
+.gname span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* 기준변경: 오른쪽끝 */
+    width: 0%;
+    /* 변경포인트: 가로크기없음*/
+    height: 2px;
+    background-color: #fff;
+    /* 트랜지션 :속시이지 */
+    transition: width .3s ease-out;
+}
+
+/* 상품정보*/
+.ginfo {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    /* 크기 잡아줘서 자연스럽게 늘어나고 줄어들게 */
+    font-size: 12px;
+}
+
+/* 가격 */
+.ginfo span:last-child {
+    float: right;
+    /* 인라인 요소 오른쪽 보내기 */
+}
+
+/* 가상요소로 반투명 커버 만들기 */
+.gbx li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity .6s ease-out;
+}
+
+/* 마우스 오버시 커버보이기 */
+.gbx li:hover::after {
+    opacity: 1;
+}
+
+/* 마우스 오버시 가운데 2번째 커버보이기 처리 */
+.gbx ul:nth-child(2) li:nth-child(2):hover::after {
+    opacity: 0;
+}
+
+/*4. 상품소개영역(section.gdetail/1200*1000) - 2개영역*/
+.gdetail {
+    height: 1000px;
+}
+
+/* 상품소개박스 */
+.gdsec {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    /* 넘치는 자식 요소 숨기기 !*/
+    outline: 2px dashed red;
+}
+
+/* 상품소개 리스트 부모 박스 */
+.gdsec > ul {
+    width: 300%;
+    height: 100%;
+}
+
+/* 상품소개 리스트 li */
+.gdsec > ul > li {
+    width: 33.33%;
+    height: 100%;
+    outline: 5px dotted green;
+}
+
+/* 각 li 셋팅*/
+.gdsec > ul > li:first-child {
+    background: url(../images/homepage_brand1.jpg) no-repeat center/auto 100%;
+}
+
+.gdsec > ul > li:nth-child(2) {
+    background: url(../images/homepage_brand2.jpg) no-repeat center/auto 100%;
+}
+
+.gdsec > ul > li:last-child {
+    background: url(../images/homepage_brand3.jpg) no-repeat center/auto 100%;
+}
+
+/*5. 블로그링크영역(section.blog/1200*700)*/
+.blog {
+    height: 700px;
+}
+
+.actbox {}
+
+.bbox {
+    position: relative;
+    width: calc(50% - 160px);
+    /* 특정 px 빼고 양쪽 등분 */
+    height: 480px;
+    float: left;
+    overflow: hidden;
+    /* 각자의 박스 내부에서만 보이게 처리 - 중요  !!*/
+    outline: 2px dashed red;
+}
+
+/* 블로그 이동 버튼 */
+.blgbtn {
+    position: absolute;
+    top: 34%;
+    left: 13%;
+    /* 부모는?*/
+    width: 171px;
+    height: 51px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 10px;
+/*    text-transform: uppercase; 대문자변경*/
+    line-height: 51px;
+    cursor: pointer;
+}
+
+.bbox h3 {
+    position: absolute;
+    top: 30%;
+    width: 800px;
+    outline: 2px dotted blue;
+    font-size: 100px;
+    font-weight: bold;
+    transition: all 1s ease-out;
+}
+
+/* 중앙박스 */
+.bb2 {
+    width: 320px;
+    background: url(../images/journal-img.jpg) no-repeat center/cover;
+}
+
+/* 중앙박스 흰색글자 */
+.bb2 .mtxt2 {
+    top: 57%;
+    left: 100%;
+    color: #fff;
+}
+
+/* 오른쪽박스 검정색 글자 */
+.bb3 .mtxt2 {
+    top: 57%;
+    left: 0%;
+    color: #000;
+}
+
+/* 중앙박스 흰색글자 */
+.bb2 .mtxt1 {
+    top: 30%;
+    right: 100%;
+    text-align: right;
+    color: #fff;
+}
+
+/* 왼쪽박스 검정색 글자 */
+.bb1 .mtxt1 {
+    top: 30%;
+    right: 0%;
+    text-align: right;
+    color: #000;
+}
+
+/*6. 하단영역(footer.info/1200*500)*/
+.info {
+    height: 500px;
+}

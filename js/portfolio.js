@@ -155,10 +155,10 @@ $(function () { //////// jQB //////////////
                 iclass = "80%";
                 break;
             case 13:
-                iclass = "70%";
+                iclass = "75%";
                 break;
             case 14:
-                iclass = "65%";
+                iclass = "75%";
                 break;
             default:
                 iclass = "HOVER";
@@ -267,7 +267,7 @@ $(function () { //////// jQB //////////////
     /* 공통 pj 페이지 이동 */
 
     let link = [
-                "",
+                "join_pj/Carbon_PJ/index.html",
                 "join_pj/hana/index.html",
                 "join_pj/ator/index.html",
                 "join_pj/Megabox/index.html",

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/*전체사이트 핵심공통*/
+/*웹폰트- Roboto체 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto.woff2) format("woff2");
+}
+*/
+
+/*사이트 전체설정*/
+body {
+    font-family: Roboto, sans-serif;
+}
+
+
+
+/* 공통 중요 css는 core */
+/*IR(Image Replacement)-이미지설명요소 등 안보이게 처리*/
+.bld {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 레이아웃 공통 */
+.inbox {
+    width: 1200px;
+    max-width: 100%;
+    /* 1200px 보다 작아질때 화면에 맞춤 !!*/
+    margin: 0 auto;
+    outline: 2px dashed blue;
+}
+
+/* float 해제 */
+.clb::after{
+    content: "";
+    display: block;
+    clear: both;
+}

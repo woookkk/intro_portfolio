@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carbon Beauty</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/rellax.min.js"></script>
+    <script src="js/smoothScroll20.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <!--1. 상단영역(header.top/100%*82)-->
+    <div id="top">
+        <header class="top inbox">
+            <!--1-1.중앙로고-->
+            <h1 id="logo">
+                <span class="bld">카본뷰티로고</span>
+                <svg viewBox="0 0 80 80">
+                    <path d="M0 0v80h80V0H0zm19.9 60.4h-6.8V46.2H20c2.1 0 3.4 2 3.4 3.8 0 1.3-.5 2.4-1.4 3.1 1.4.7 2.2 2 2.2 3.5 0 2.2-1.8 3.8-4.3 3.8zM25 29.3c-.9 2.2-3.6 3.3-5.7 3.3-4 0-6.7-3.8-6.7-7.3s2.5-7.1 6.8-7.1c2.4 0 4.4 1.2 5.3 3.1l.1.3-1.9 1.2-.2-.3c-.9-1.9-2.7-2.1-3.5-2.1-2.8 0-4.3 2.5-4.3 4.9 0 2.8 2 5 4.4 5 1.2 0 2.8-.6 3.6-2.2l.1-.3 2 1.1v.4zm14.1 31.2c-4.1 0-6.7-3.7-6.7-7.2 0-1.8.7-3.7 1.9-5 1.3-1.4 3-2.2 4.8-2.2 1.9 0 3.6.8 4.8 2.3 1.2 1.4 1.8 3.2 1.8 4.9.1 4-2.9 7.2-6.6 7.2zm4.2-27.9l-1.6-4h-5.2l-1.6 4h-2.6l5.8-14.2H40l5.8 14.2h-2.5zM66 60.4h-2l-7.8-9.7v9.7H54V46.2h1.7l8 9.9v-9.9H66v14.2zm-2.4-27.8l-4.5-7.1h2.1c1.1 0 2-1 2-2.4 0-1.3-1-2.4-2.1-2.4h-3.6v12h-2.4V18.4h6.1c2.6 0 4.4 2.4 4.4 4.6 0 1.9-1.1 3.6-2.7 4.2l3.4 5.3h-2.7z"></path>
+                    <path d="M39.1 48.3c-2.7 0-4.3 2.5-4.3 5 0 2.4 1.6 5 4.3 5 2.7 0 4.3-2.5 4.3-5 0-2.4-1.6-5-4.3-5zM21 50.3c0-1.1-.7-1.9-1.6-1.9h-3.9v3.8h3.9c1 0 1.6-.8 1.6-1.9zM39.1 21.6l-2 5H41zM19.9 54.3h-4.4v4H20c1 0 1.9-.9 1.9-2-.1-1.1-1-2-2-2z"></path>
+                </svg>
+            </h1>
+
+            <!--1-2. 햄버거, 검색버튼 박스 -->
+            <ul class="btnGrp">
+                <li>
+                    <div class="ham">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="magni">
+                        <svg viewBox="0 0 32 32">
+                            <path d="M31.9 27.8l-8.5-8.5c1.2-2 2-4.3 2-6.7 0-7-5.7-12.6-12.6-12.6C5.8 0 .1 5.7.1 12.6c0 7 5.7 12.6 12.6 12.6 2.4 0 4.6-.6 6.5-1.8l8.5 8.5 4.2-4.1zM4.8 12.6c0-4.4 3.6-7.9 7.9-7.9 4.4 0 7.9 3.6 7.9 7.9 0 4.4-3.6 7.9-7.9 7.9-4.3 0-7.9-3.5-7.9-7.9z"></path>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+
+            <!--1-3. 장바구니, 문구 박스 -->
+            <ul class="rsGrp">
+                <li>
+                    <p>
+                        <strong>Free shipping</strong>
+                        <span></span>
+                        on all orders over $35*
+                    </p>
+                </li>
+                <li>
+                    <div class="cart">
+                        <svg viewBox="0 0 32 32">
+                            <path class="est0" d="M22.4 0H9.6v7.7H3.8V32h24.5V7.7h-5.9V0zm-10 2.7h7.2v5h-7.2v-5z"></path>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </header>
+    </div>
+    
+    <!-- 1.5 상단 무빙레터1 -->
+    <div class="stg1"></div>
+    
+    <!--2. 배너영역(section.ban/1200*500)-->
+    <div id="ban">
+        <section class="ban inbox">
+            <h2 class="bld">배너영역</h2>
+            <img src="images/bg-pink.jpg" alt="메인페이지 배너">
+            <!-- 배너 버튼 -->
+            <button class="banbtn cmbtn rellax">
+                <strong>Fall Picks <sup>43</sup></strong>
+                <span>2020 Shopping Guide</span>
+                <b>▶</b>
+            </button>
+        </section>
+    </div>
+    
+    <!-- 2.5 상단 무빙레터2 -->
+    <div class="stg2"></div>
+
+    <!--3. 상품리스트영역(section.glist/1200*2000)-->
+    <div id="glist">
+        <section class="glist inbox">
+            <h2>상품리스트영역</h2>
+            <div class="gbx">
+                <ul class="rellax2">
+                    <li>
+                        <div class="ibx">
+                            <h3 class="gcat">2019 Fall Picks</h3>
+                            <h4 class="gname">
+                                <span><b>PlantGenius Melt Moisturizer</b></span>
+                            </h4>
+                            <h5 class="ginfo">
+                                <span>Alpyn Beauty</span>
+                                <span>$60.00</span>
+                            </h5>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="rellax3">
+                    <li>
+                        <div class="ibx">
+                            <h3 class="gcat">2019 Fall Picks</h3>
+                            <h4 class="gname">
+                                <span><b>PlantGenius Melt Moisturizer</b></span>
+                            </h4>
+                            <h5 class="ginfo">
+                                <span>Alpyn Beauty</span>
+                                <span>$60.00</span>
+                            </h5>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="rellax2">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!--4. 상품소개영역(section.gdetail/1200*500) - 2개영역-->
+    <div id="gdetail">
+        <section class="gdetail inbox">
+            <h2>상품소개영역</h2>
+            <div class="gdsec">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!--5. 블로그링크영역(section.blog/1200*400)-->
+    <div id="blog">
+        <section class="blog inbox">
+            <h2>블로그링크영역</h2>
+            <div class="actbox clb">
+                <div class="bbox bb1">
+                    <h3 class="mtxt1">Carbon</h3>
+                </div>
+                <div class="bbox bb2">
+                    <h3 class="mtxt1">Carbon</h3>
+                    <h3 class="mtxt2">Journey</h3>
+                </div>
+                <div class="bbox bb3">
+                    <h3 class="mtxt2">Journey</h3>
+                    <!-- 블로그 이동 버튼 -->
+                    <button class="blgbtn cmbtn">
+                        <span>READ THE BLOG</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--6. 하단영역(footer.info/1200*600)-->
+    <div id="info">
+        <footer class="info inbox">
+            <h2>하단영역</h2>
+        </footer>
+    </div>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
