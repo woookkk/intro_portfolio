@@ -617,12 +617,14 @@
         right: -20px;
         font-size: 2.5rem;
     }
-
+    
     .project_page_header .project_page_text {
-        padding: 55% 5% 5%;
+        padding: 55% 0 5% 1%;
         font-size: 1.3rem;
     }
-
+    .project_page_header .break_pjh{
+        display: block;
+    }
     .project_area .project_first_text,
     .project_area .project_sec_text {
         display: block;
