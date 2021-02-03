@@ -75,7 +75,7 @@ $(function () { //////// jQB //////////////
         $(this).hide();
     }); /////// click /////////
 
-    $(".close_btn").click(function () {
+    $(".close_btn, .gnb_list li").click(function () {
         $(".gnb_list li, .close_btn").each(function (idx, ele) {
             $(ele).delay(200 * idx).fadeTo(400, 0);
         }); ////// each //////////
@@ -229,6 +229,7 @@ $(function () { //////// jQB //////////////
         smartBackspace: false,
         loop: true
     });
+    
 
 
     /* 이메일 복사 */

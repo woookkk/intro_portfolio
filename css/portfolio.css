@@ -118,6 +118,7 @@ body {
     position: relative;
     width: 100%;
     display: none;
+    cursor: pointer;
 }
 
 .gnb_list li a {
